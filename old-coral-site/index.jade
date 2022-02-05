@@ -1,0 +1,91 @@
+doctype html
+html(lang="en")
+	head
+		title Coral, a student agency at KU
+		link(href="css/style.css", rel="stylesheet", type="style/css")
+		link(href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,700', rel='stylesheet', type='text/css')
+		script(src="http://code.jquery.com/jquery-2.1.0.min.js")
+		script(src="js/scrollit.js")
+		script(src="js/modernizr.js")
+		meta(name='viewport', content='width=device-width, height=device-height, initial-scale=1')
+		link(rel="shortcut icon" href="favicon.ico")
+	body
+		#nav
+			ul
+				li 
+					a(href="#header" data-scroll-nav="0")
+						img(src="i/logo-sidebar.png")
+				li 
+					a(href="#whatwedo" data-scroll-nav="1")
+						img(src="i/whatwedo-sidebar.png")
+				li 
+					a(href="#ourwork" data-scroll-nav="2")
+						img(src="i/ourwork-sidebar.png")
+				li
+					a(href="#coverage" data-scroll-nav="3")
+						img(src="i/coverage-sidebar.png")
+				li
+					a(href="#contact" data-scroll-nav="4")
+						img(src="i/connect-sidebar.png")
+
+		#main 
+			section#header.fullheight(data-scroll-index="0")
+				#header-container
+					img(src="i/logo.png")
+					h1#intro.desktop Coral is a team of students at KU<br /> learning while we create and build.
+					h1#intro.mobile Coral is a team of students at KU learning while we create and build.
+
+			section#whatwedo.fullheight(data-scroll-index="1")
+				div.container
+					h2.nav What we do
+					ul
+						li Provide project and team focused education and experience
+						li Promote collaboration across disciplines and majors on campus
+						li Specialize in branding, web design and development 
+			
+			section#ourwork(data-scroll-index="2")
+				h2.nav Our work
+				p In the past, we've focused on projects for small businesses and organizations in our community. We're now focusing on our own project, a web platform to encourage and simplify campus involvement.
+			
+				.worksample#bschoolblog
+					img(src="i/bschoolblog.png")
+					h3 KU School of Business Blog
+					p.desc Web design and WordPress theme development
+					a#visit(href="http://blog.business.ku.edu") Visit Site
+			
+				.worksample#isak
+					img(src="i/isak.png")
+					h3 Information Systems Association at KU 
+					p.desc Branding design, web design and development
+					a#visit(href="http://ku-isak.com") Visit Site
+			
+				.worksample#saycheez
+					img(src="i/saycheez.png")
+					h3 Say Cheez Lawrence Photobooth Company
+					p.desc Web design and WordPress theme development
+					a#visit(href="http://saycheezlawrence.com") Visit Site
+			
+			section#coverage.fullheight(data-scroll-index="3")
+				div.container
+					h2.nav Recognition and coverage
+					a.coverage(href="http://siliconprairienews.com/2014/07/get-to-know-the-five-finalists-for-student-entrepreneur-of-the-year/") Finalist for Student Entrepreneur of the Year
+					a.coverage(href="http://issuu.com/kubusiness/docs/dean_s_report/17?e=5545359/9501138") KU Business School Dean's Report (p. 30)
+					a.coverage(href="http://siliconprairienews.com/2014/05/ku-students-collaborate-to-form-experimental-digital-agency/") Q&amp;A with Silicon Prairie News
+			
+			section#contact(data-scroll-index="4")
+				div.container
+					h2.nav Contact us
+					p We're always looking for project ideas and more students to join our team. Whether you have an interest in learning to code (we love teaching web development to students with no prior experience!), or want to design, write, draw, take pictures, advertise, manage, you name it, we'd love to hear from you.
+					a(href='mailto:hello@builtbycoral.com' target="_blank") hello@builtbycoral.com
+
+
+			script.
+				$(function(){
+				  $.scrollIt();
+				});
+
+
+
+
+	
+

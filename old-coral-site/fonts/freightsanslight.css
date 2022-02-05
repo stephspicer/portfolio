@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'FreightSansLightRegular';
+    src: url('freightsanslight.eot');
+    src: url('freightsanslight.eot') format('embedded-opentype'),
+         url('freightsanslight.woff2') format('woff2'),
+         url('freightsanslight.woff') format('woff'),
+         url('freightsanslight.ttf') format('truetype'),
+         url('freightsanslight.svg#FreightSansLightRegular') format('svg');
+}

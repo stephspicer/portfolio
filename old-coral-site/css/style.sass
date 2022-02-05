@@ -1,0 +1,139 @@
+//colors
+$darkCoral: #de2438
+$medCoral: #ff5c59
+$lightCoral: #ff7d61
+$darkGray: #696363
+$medGray: #888
+
+//fonts
+// @font-face 
+// 	font-family: 'FreightBold'
+// 	src: url('../fonts/freightsansbold.eot')
+// 	src: url('../fonts/freightsansbold.eot') format('embedded-opentype'), url('../fonts/freightsansbold.woff2') format('woff2'), url('../fonts/freightsansbold.woff') format('woff'),url('../fonts/freightsansbold.ttf') format('truetype'), url('../fonts/freightsansbold.svg#FreightSansBoldRegular') format('svg')
+
+
+// @font-face 
+// 	font-family: 'FreightLight'
+// 	src: url('../fonts/freightsanslight.eot')
+// 	src: url('../fonts/freightsanslight.eot') format('embedded-opentype'), url('../fonts/freightsanslight.woff2') format('woff2'), url('../fonts/freightsanslight.woff') format('woff'), url('../fonts/freightsanslight.ttf') format('truetype'), url('../fonts/freightsanslight.svg#FreightSansLightRegular') format('svg')
+
+
+body,html, #main
+	height: 100%
+
+body
+	background-color: #f4f4f2
+	font-family: 'Source Sans Pro', sans-serif
+	font-weight: 300
+	font-size: 18px
+	line-height: 200%
+	letter-spacing: 1px
+	color: $darkGray
+	word-spacing: 3px
+	margin: 0
+
+	h2
+		color: $lightCoral
+		font-weight: 300
+
+	ul
+		-webkit-padding-start: 0
+
+	li 
+		list-style-type: none
+
+	a
+		color: $darkGray
+
+	a:hover
+		color: $medCoral
+
+	p 
+		line-height: 150%
+
+#main 
+	margin-left: 75px
+
+section
+	padding: 200px 300px
+	margin: 0
+
+section#header
+	img
+		width: 100px
+
+	#header-container
+		width: 440px
+		text-align: center
+
+	h1
+		text-align: left
+		color: $medGray
+		font-weight: 300
+
+section#ourwork
+	a
+		text-transform: uppercase
+		padding: 8px 20px 
+		font-size: 14px
+		font-weight: 700
+		color: $lightCoral
+		border: 2px solid $lightCoral
+	h3
+		font-size: 15px
+		font-weight: 700
+		margin-bottom: 0
+		color: $medGray
+
+	div
+		margin: 100px 0
+	
+	a.visit
+		text-align: center
+
+	p.desc
+		font-size: 14px
+		margin-top: 0
+		margin-bottom: 22px
+
+	a:hover
+		border-radius: 18px
+
+section#coverage
+	a
+		display: block
+
+#nav
+	background-color: $darkCoral
+	position: fixed
+	left: 0
+	top: 0
+	height: 100%
+	width: 80px
+	padding: 30px 0
+
+	img
+		width: 40px
+		padding: 0 0 0 20px
+		vertical-align: middle
+
+	a.active
+		border-left: 6px solid $medCoral
+		padding: 15px 0
+
+		img
+			margin-left: -6px
+
+	img:nth-of-type(5)
+		margin-bottom: 0
+
+	li
+		margin-bottom: 55px
+
+
+#contact
+	a 
+		text-decoration: underline
+
+
+

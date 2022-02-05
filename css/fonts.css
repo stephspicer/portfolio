@@ -1,0 +1,65 @@
+
+
+@font-face { 
+  font-family: 'Freight'; 
+  src: url('../fonts/FreightBook.otf'); 
+  font-weight: normal; 
+  font-style: normal; 
+}
+
+@font-face { 
+  font-family: 'FreightBold'; 
+  src: url('../fonts/FreightBookBold.otf'); 
+  font-weight: bold; 
+  font-style: normal; 
+}
+
+@font-face { 
+  font-family: 'Freight'; 
+  src: url('../fonts/FreightBookItalic.otf'); 
+  font-weight: normal; 
+  font-style: italic; 
+}
+@font-face { 
+  font-family: 'FreightSans'; 
+  src: url('../fonts/FreightSans_Light.ttf'); 
+  font-weight: 100; 
+  font-style: normal; 
+}
+@font-face { 
+  font-family: 'FreightSans'; 
+  src: url('../fonts/FreightSans_Book.ttf'); 
+  font-weight: normal; 
+  font-style: normal; 
+}
+
+
+@font-face { 
+  font-family: 'FreightSans'; 
+  src: url('../fonts/FreightSans_Medium.ttf'); 
+  font-weight: 500; 
+  font-style: normal; 
+}
+
+@font-face { 
+  font-family: 'FreightSansBold'; 
+  src: url('../fonts/FreightSansBold.ttf'); 
+  font-weight: 800; 
+  font-style: normal; 
+}
+
+
+@font-face { 
+  font-family: 'Futura'; 
+  src: url('../fonts/Futura-Bold.ttf'); 
+  font-weight: bold; 
+  font-style: normal; 
+}
+
+
+@font-face { 
+  font-family: 'Futura'; 
+  src: url('../fonts/Futura-Medium.ttf'); 
+  font-weight: normal; 
+  font-style: normal; 
+}
