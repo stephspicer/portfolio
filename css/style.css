@@ -11,9 +11,13 @@ body {
   color: #1F1F26;
   margin: 0;
   line-height: 1.5;
-  background-color: #f7f2f1; 
+  background-color: #fdfcfc; 
   text-rendering: optimizeLegibility; 
   letter-spacing: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'DM Sans', sans-serif;
 }
 
 .site-wrap {
@@ -24,6 +28,13 @@ a {
   text-decoration: none;
 }
 
+canvas {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+  }
+
 /*********** SS ************/
 #SS{
   transform: rotate(-15deg);
@@ -31,7 +42,7 @@ a {
   -webkit-transform: rotate(-15deg); /* Chrome, Safari, Opera */
   display: inline-block;
   margin-right: 20px;
-  fill: #ffd7e0;
+  fill: #7F9CFB;
   font-family: 'FreightSans', sans-serif;
 
 }
@@ -45,18 +56,12 @@ a {
 }
 
 #SS svg:last-of-type{
-  margin-left: 2.5px;
-  margin-bottom: -2px;
-}
-#SS svg:last-of-type{
-  margin-left: 2.5px;
-  margin-bottom: -2px;
-}
-#SS:hover svg{
-  fill: #b276f5;
+  margin-left: 6px;
+  margin-bottom: -6px;
 }
 
 #SS:hover svg{
+  fill: #91E9D4;
   transform: rotate(15deg);
   -ms-transform: rotate(15deg); /* IE 9 */
   -webkit-transform: rotate(15deg); /* Chrome, Safari, Opera */    
@@ -72,7 +77,13 @@ a {
   margin: 0;
   text-align: center;
   position: relative;
-  background: #222033;
+  background: #110E0E;
+  height: 100vh;
+}
+
+.header-container{
+  max-width: 1050px;
+  margin: 0 auto;
 }
 
 #introtxt h1,
@@ -89,8 +100,7 @@ a {
 
 
 .logo {
-  margin:0 0 40px 30px;
-  margin-bottom: 40px;
+  margin: 0 0 20px 10px;
   display: inline-block;
   float: left;
   font-size: 25px;
@@ -100,7 +110,7 @@ a {
 }
 
 #headertxt a.logo:hover{
-  color: #1F1F26;
+  color: #91E9D4;
 
 }
 
@@ -113,6 +123,7 @@ a {
   overflow: auto;
   position: relative;
   height: 144px;
+  z-index: 1000;
 }
 
 #headertxt ul{
@@ -130,8 +141,8 @@ a {
 #headertxt ul li{
   list-style-type: none;
   display:inline;
-  vertical-align: center;
   margin-right: 20px;
+  font-family: DM Sans, sans-serif;
 }
 
 #headertxt ul li:last-of-type{
@@ -139,20 +150,21 @@ a {
 }
 
 #headertxt a{
-  color: #ffd7e0;
+  color: #fff;
   text-decoration: none; 
 }
 
 #headertxt a:hover{
-  color:#b276f5;
+  color:#91E9D4;
 }
 
 /*********** PINK STUFF ************/
 
 .pink { 
-  background-color: #222033;
   color: #fff;
   margin: 0;
+  width: 50%;
+  text-align: left;
 }
 
 .pink > div {
@@ -163,7 +175,7 @@ a {
 }
 
 .pink h1 {
-  font-size: 45px;
+  font-size: 64px;
   line-height: 1.2;
   letter-spacing: -1px;
   margin-bottom: .25em;
@@ -173,6 +185,15 @@ a {
   font-weight: normal;
   font-size: 20px;
   margin-bottom: 1em;
+  font-family: 'Source Serif Pro', sans-serif;
+}
+.pink a {
+  color: white;
+  border-bottom: 1px solid white;
+}
+
+.pink a:hover{
+  font-style: italic;
 }
 
 .squiggles {
@@ -188,7 +209,7 @@ a {
 
 /********* PROJECT GRID ************/
 .work{
-  padding: 0 8% 8%;
+  padding: 8% 8%;
   text-align: center;
   margin: auto;
   max-width: 1000px;
@@ -210,9 +231,17 @@ h4 {
 }
 
 h5 {
-  text-align: left;
-  font-weight: normal;
-  font-size: 22px;
+    bottom: 0;
+    text-align: left;
+    font-weight: normal;
+    font-size: 22px;
+    display: flex;
+    position: absolute;
+    align-items: center;
+}
+
+h5 img {
+  height: 48px;
 }
 
 #h3-line{
@@ -301,6 +330,8 @@ footer {
   padding: 18px;
   text-align: center;
   font-size: 16px;
+  font-family: 'DM Sans', sans-serif;
+  color: #686A7B;s
 }
 
 footer a{
