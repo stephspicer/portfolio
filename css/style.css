@@ -208,6 +208,10 @@ canvas {
     height: 71px;
   }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /********* PROJECT GRID ************/
 .work{
   padding: 8% 8%;
@@ -219,7 +223,6 @@ h3{
   margin: 0 auto 20px;
   padding-top: 0;
   font-weight: normal;
-
 }
 
 h4 {
@@ -239,7 +242,22 @@ h5 {
     display: flex;
     position: absolute;
     align-items: center;
+    cursor:pointer;
+
 }
+
+.my-work-link{
+  color: white;
+}
+
+.my-work-link h5{
+  transition: all 100ms linear;
+}
+
+.my-work-link:hover h5{
+  transform: translateY(-10px);
+}
+
 
 h5 img {
   height: 48px;
