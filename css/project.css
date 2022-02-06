@@ -10,10 +10,10 @@ dark gray = #1F1F26
 body {
   font-family: 'Source Serif Pro', Nunito, sans-serif;
     font-weight: normal;
-    font-size: 19px;
+    font-size: 18px;
     color: #1F1F26;
     margin: 0;
-    line-height: 150%;
+    line-height: 170%;
     text-rendering: optimizeLegibility;
     letter-spacing: 0;
 }
@@ -39,8 +39,13 @@ a {
 }
 
 a.basic {
-    text-decoration: underline;
+    border-bottom: 1px solid;
     color: #1F1F26;
+}
+
+.basic:hover{
+    border-color: #007050;
+    color: #007050;
 }
 
 
@@ -425,6 +430,8 @@ h3 {
     width: 31.5%;
     background-color: #FFF;
     transition: all 300ms ease;
+    border-radius: 4px;
+    overflow: hidden;
 }
 
 a.project-grid:visited {
@@ -442,17 +449,22 @@ a.project-grid:visited::before {
 }
 
 .current .project-txt::after {
-    content: 'You are here';
+    content: 'you are here';
     text-transform: uppercase;
-    margin-left: 10px;
-    font-size: 9px;
-    background-color: #28188e;
-    color: white;
-    border-radius: 19px 0 0 19px;
-    padding: 4px 12px;
+    margin-left: 8px;
+    font-size: 10px;
+    letter-spacing: .4px;
+    font-weight: 800;
+    text-align: center;
+    line-height: 1.2;
+    color: #352f5e;
+    width: 50px;
+    background-color: #EAE6FA;
+    border-radius: 34px;
+    padding: 8px 12px;
     position: absolute;
     top: 8px;
-    right: 0;
+    right: 15px;
 }
 
 .project-grid:hover {
@@ -520,16 +532,17 @@ a.project-txt:hover {
 }
 
 footer {
-    background-color: #f7f2f1;
-    color: #1F1F26;
-    padding: 18px;
+    background-color: #f1f6f7;
+    font-family: 'DM Sans', sans-serif;
+    color: #909198;
+    padding: 12px;
     text-align: center;
-    font-size: 17px;
+    font-size: 18px;
 }
 
 footer a {
-   text-decoration: underline;
-   color: #1F1F26;
+   border-bottom: 1px solid;
+   color: #909198;
 }
 
 footer a:hover {

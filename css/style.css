@@ -11,7 +11,7 @@ body {
   color: #1F1F26;
   margin: 0;
   line-height: 1.5;
-  background-color: #fdfcfc; 
+  background-color: #f1f6f7; 
   text-rendering: optimizeLegibility; 
   letter-spacing: 0;
 }
@@ -284,6 +284,8 @@ h5 img {
   background-color: #fff;
   transition: all 300ms ease;
   cursor: pointer;
+  overflow: hidden;
+  border-radius: 4px;
 }
 
 .project-grid:hover {
