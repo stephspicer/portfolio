@@ -475,7 +475,8 @@ a.project-grid:visited::before {
 }
 
 .more-projects {
-    background-color: #f7f2f1;
+    background-color: #f1f6f7;
+    font-family: 'DM Sans', sans-serif;
     margin-bottom: 0;
     padding: 40px 0;
 }
