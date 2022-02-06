@@ -347,21 +347,21 @@ a.view:hover{
 
 
 footer {
-  color: #1F1F26;
-  padding: 18px;
-  text-align: center;
-  font-size: 16px;
-  font-family: 'DM Sans', sans-serif;
-  color: #686A7B;s
+    background-color: #f1f6f7;
+    font-family: 'DM Sans', sans-serif;
+    color: #909198;
+    padding: 12px;
+    text-align: center;
+    font-size: 18px;
 }
 
-footer a{
-  text-decoration: underline;
-  color: #1F1F26;
+footer a {
+   border-bottom: 1px solid;
+   color: #909198;
 }
-footer a:hover{
-  color: #1F1F26;
 
+footer a:hover {
+    color: #1F1F26;
 }
 
 @media (max-width: 550px){
