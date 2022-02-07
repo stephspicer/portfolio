@@ -116,42 +116,6 @@ blockquote {
 
 
 
-/*********** SS ************/
-
-#SS {
-    transform: rotate(-15deg);
-    -ms-transform: rotate(-15deg);
-    /* IE 9 */
-    -webkit-transform: rotate(-15deg);
-    /* Chrome, Safari, Opera */
-    display: inline-block;
-    margin-right: 20px;
-    fill: #fff;
-}
-
-#SS svg {
-    transition: all 0.08s;
-    -webkit-transition: all 0.08s;
-    transform: rotate(58deg);
-    -ms-transform: rotate(58deg);
-    /* IE 9 */
-    -webkit-transform: rotate(58deg);
-    /* Chrome, Safari, Opera */
-}
-
-#SS svg:last-of-type {
-    margin-left: 3.5px;
-    margin-bottom: -2px;
-}
-
-#SS:hover svg {
-    transform: rotate(15deg);
-    -ms-transform: rotate(15deg);
-    /* IE 9 */
-    -webkit-transform: rotate(15deg);
-    /* Chrome, Safari, Opera */
-}
-
 
 
 /****** header ******/
@@ -290,13 +254,13 @@ section.nav-item {
     /* Chrome, Safari, Opera */
 }
 
-#SS svg:last-of-type {
+/*#SS svg:last-of-type {
     margin-left: 2.5px;
     margin-bottom: -2px;
-}
+}*/
 
 #SS svg:last-of-type {
-    margin-left: 2.5px;
+    margin-left: -0.5px;
     margin-bottom: -2px;
 }
 
