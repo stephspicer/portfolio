@@ -133,6 +133,13 @@ blockquote {
 .inline {
     display: inline-block;
     max-width: 300px;
+    vertical-align: top;
+}
+
+.inline2{
+    width: 49.5%;
+    display: inline-block;
+    vertical-align: top;
 }
 
 .shadow {
