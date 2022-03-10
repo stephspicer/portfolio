@@ -53,6 +53,14 @@ a.basic {
     color: #007050;
 }
 
+button {
+    display: block;
+    margin: 10px 0;
+    font-family: 'DM Sans';
+    border: 0;
+    padding: 16px;
+    border-radius: 5px;
+}
 
 a.button {
     display: inline-block;
