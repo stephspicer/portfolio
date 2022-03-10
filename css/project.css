@@ -56,10 +56,12 @@ a.basic {
 
 
 a.button, button {
-    display: inline-block;
+    display: block;
     padding: 15px 30px;
+    font-family: 'DM Sans';
     margin: 20px 0;
     color: #FFF;
+    border: 0;
     background-color: #22335b;
     text-align: center;
     font-size: 19px;
