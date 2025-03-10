@@ -1,23 +1,37 @@
 
 
 html {
-  background-color: #91e9d4;
+  background-color: #221728;
 }
 
 body {
-  font-family: 'Source Serif Pro', Nunito, sans-serif;
+  font-family: 'Inter', Arial, sans-serif;
   font-weight: 400;
-  font-size: 17px;
-  color: #1F1F26;
+  font-size: 20px;
+  color: #2A2C3C;
   margin: 0;
   line-height: 1.5;
-  background-color: #f1f6f7; 
+  background-color: #FFF; 
   text-rendering: optimizeLegibility; 
   letter-spacing: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'DM Sans', sans-serif;
+}
+
+button {
+  padding: 16px 48px;
+  border-radius: 8px;
+background: #221728;
+color: #FFF;
+font-family: Manrope;
+font-size: 18px;
+font-weight: 600;
+line-height: 140%; /* 25.2px */
+letter-spacing: 0.18px;
+border: 0;
+margin-top: 2rem;
 }
 
 .site-wrap {
@@ -35,6 +49,55 @@ canvas {
     position: absolute;
     top: 0;
   }
+
+
+
+  section.home-project-feature {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.content {
+    display: flex;
+    gap: 5rem;
+        margin: 8rem;
+}
+
+.content-item {
+    align-self: center;
+    width: 50%;
+}
+
+h2 {
+            color: var(--neutrals-content, #2A2C3C);
+            font-family: Inter;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%; /* 30px */
+            letter-spacing: -0.4px;
+            margin-bottom: 1rem;
+        }
+
+.image-container {
+    width: 50%;
+}
+ .image-container img {
+    border-radius: 1rem;
+    width: 100%;
+    height: auto;
+}
+
+span {
+    display: block;
+    margin: 0 8rem -4rem;
+    font-family: 'Manrope';
+    letter-spacing: 2px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    opacity: 0.88;
+}
+
 
 /*********** SS ************/
 #SS{
@@ -57,8 +120,8 @@ canvas {
 }
 
 #SS svg:last-of-type{
-  margin-left: 2px;
-  margin-bottom: -6px;
+  margin-left: 4px;
+  margin-bottom: -4px;
 }
 
 #SS:hover svg{
@@ -78,13 +141,26 @@ canvas {
   margin: 0;
   text-align: center;
   position: relative;
-  background: #110E0E;
-  height: 100vh;
+  background: #FBF6F4;
+  /*height: 100vh;*/
+}
+
+#introcanvas::after {
+  background: linear-gradient(180deg, #FBF6F4 0%, #FFF 100%);
+  width: 100vw;
+  height: 5rem;
+}
+
+#gradient-div {
+  background: linear-gradient(180deg, #FBF6F4 0%, #FFF 100%);
+  width: 100vw;
+  height: 5rem;
 }
 
 .header-container{
   max-width: 1050px;
   margin: 0 auto;
+  padding: 2rem 0;
 }
 
 #introtxt h1,
@@ -114,7 +190,6 @@ canvas {
   color: #91E9D4;
 
 }
-
 
 #headertxt{
   padding: 0;
@@ -164,8 +239,6 @@ canvas {
 .pink { 
   color: #fff;
   margin: 0;
-  width: 50%;
-  text-align: left;
 }
 
 .pink > div {
@@ -183,10 +256,14 @@ canvas {
 }
 
 .pink h2 {
-  font-weight: normal;
+  color: var(--neutrals-content, #2A2C3C);
+  /* minor third/body-lg blg */
+  font-family: Inter;
   font-size: 20px;
-  margin-bottom: 1em;
-  font-family: 'Source Serif Pro', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 30px */
+  letter-spacing: 0.4px;
 }
 .pink a {
   color: white;

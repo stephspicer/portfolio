@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Portfolio</title>
+<style>
+/* Define default theme colors */
+:root {
+  --primary-color: #333; /* Dark gray */
+  --secondary-color: #eee; /* Light gray */
+  --accent-color: #007bff; /* Blue */
+  --text-color: #000;      /* Black */
+  --background-color: #fff; /* White */
+}
+
+/* Theme 1: Light */
+[data-theme="light"] {
+  --primary-color: #333;
+  --secondary-color: #eee;
+  --accent-color: #007bff;
+  --text-color: #000;
+  --background-color: #fff;
+}
+
+/* Theme 2: Dark */
+[data-theme="dark"] {
+  --primary-color: #eee;
+  --secondary-color: #333;
+  --accent-color: #00a878; /* Green */
+  --text-color: #fff;
+  --background-color: #111;
+}
+
+/* Theme 3: Sepia */
+[data-theme="sepia"] {
+  --primary-color: #5c3a21;
+  --secondary-color: #d8c29f;
+  --accent-color: #a0522d;
+  --text-color: #332211;
+  --background-color: #f5f0e3;
+}
+
+
+body {
+  font-family: sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0; /* Reset default margin */
+  padding: 0;
+}
+
+h1, h2, h3 {
+  color: var(--primary-color);
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+/* Theme Switcher Styles */
+#theme-switcher {
+  position: fixed; /* Or wherever you want it */
+  top: 20px;
+  right: 20px;
+  z-index: 100; /* Ensure it's above other content */
+}
+
+#theme-switcher button {
+  padding: 8px 12px;
+  margin: 5px;
+  border: none;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+</style>
+</head>
+<body>
+
+  <h1>My Portfolio</h1>
+
+  <p>Some content here...</p>
+
+  <div id="theme-switcher">
+    <button data-theme="light">Light</button>
+    <button data-theme="dark">Dark</button>
+    <button data-theme="sepia">Sepia</button>
+  </div>
+
+  <script>
+    const themeButtons = document.querySelectorAll('#theme-switcher button');
+
+    themeButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const theme = button.dataset.theme;
+        document.documentElement.setAttribute('data-theme', theme);
+
+        // Store the theme preference in localStorage
+        localStorage.setItem('theme', theme);
+      });
+    });
+
+    // On page load, check localStorage for a saved theme
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    }
+  </script>
+
+</body>
+</html>

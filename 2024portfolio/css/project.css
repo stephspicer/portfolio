@@ -12,9 +12,10 @@ html {
 }
 
 body {
-  font-family: 'Source Serif Pro', Nunito, sans-serif;
+  font-family: 'Inter', sans-serif;
     font-weight: normal;
     font-size: 18px;
+    letter-spacing: 0.5px;
     color: #1F1F26;
     margin: 0;
     line-height: 170%;
@@ -24,7 +25,112 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 500 !important;
+}
+
+.small-caps {
+    color: var(--neutrals-content, #2A2C3C);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 25.2px */
+    letter-spacing: 1.26px;
+    text-transform: uppercase;
+
+}
+
+section.background{
+    background: #F5F8F7;
+    margin: 0;
+    padding: 4rem;
+    width: 100%;
+    max-width: none;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+section.quotebox{
+    display: flex;
+    padding: 24px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: #f6f5fa;
+    gap: 4rem;
+}
+
+.quotebox + figcaption {
+    padding: 1rem 2rem;
+    opacity: 0.7;
+    text-align: center;
+    margin-bottom: 
+}
+
+.flex {
+    display: flex;
+    gap: 2rem;
+    align-items: stretch;
+    width: 100%;
+    margin: 2rem auto;
+}
+
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+
+.emoji {
+    font-size: 60px;
+    margin: 8px;
+}
+
+p.quotation {
+    font-size: 60px;
+    font-family: Manrope;
+    width: 12rem;
+}
+
+section.green{
+    background: #F5F8F7;
+    }
+
+.feature{
+    margin-bottom: 2rem;
+}
+
+.projects {
+  display: flex; 
+  flex-direction: row; 
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.project {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.project img {
+  width: auto;
+  height: 500px;
+  max-width: none;
+}
+
+
+
+section > *{
+    max-width: 1000px;
+    width: 100%;
 }
 
 .site-wrap {
@@ -130,7 +236,7 @@ blockquote {
 
 #headertxt {
     padding: 50px 50px 0;
-    font-family: DM Sans, sans-serif;
+    font-family: Manrope, sans-serif;
 }
 
 .inline {
@@ -151,23 +257,6 @@ blockquote {
 
 }
 
-.equinox .inline {
-    max-width: none;
-    height: 800px;
-}
-
-@media (max-width: 640px) {
-    .equinox .inline {
-        height: 600px;
-    }
-}
-
-@media (max-width: 480px) {
-    .equinox .inline {
-        width: 90%;
-        height: auto;
-    }
-}
 
 
 /****** overview ******/
@@ -178,9 +267,9 @@ blockquote {
 
 #overview h2 {
     font-weight: normal;
-    font-size: 1.5em;
+    font-size: 1.5rem;
     line-height: 1.5;
-    margin: -20px auto 1.5em;
+    margin: -20px auto 1.5rem;
 }
 
 
@@ -275,8 +364,8 @@ section.nav-item {
 }*/
 
 #SS svg:last-of-type {
-    margin-left: -0.5px;
-    margin-bottom: -2px;
+    margin-left: 1.5px;
+    margin-bottom: -1px;
 }
 
 #SS:hover svg {
@@ -300,6 +389,7 @@ section.nav-item {
     margin: 0;
     text-align: center;
     position: relative;
+    background: linear-gradient(180deg, #FBF6F4 0%, #FFF 100%);
 }
 
 #introtxt h1,
@@ -383,9 +473,38 @@ section.nav-item {
     text-align: center;
 }
 
+figcaption{
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+img:has(+ figcaption) {
+    margin-bottom: 8px;
+}
+
 h3 {
     padding-top: 0;
+    font-size: 32px;
+    line-height: 1.4;
+        margin: 1rem 0;
 }
+
+h4{
+    font-size: 27px;
+    line-height: 1.4;
+    margin: 1rem 0;
+
+}
+
+section.full-width {
+    margin: 0;
+    max-width: none;
+    width: 100%;
+}
+
+.full-width img{ 
+    width: 100%;
+ }
 
 .rainbowcare h3 {
     margin: 1em 15px 0;
@@ -467,7 +586,6 @@ a.project-grid:visited::before {
 
 .more-projects {
     background-color: #f1f6f7;
-    font-family: 'DM Sans', sans-serif;
     margin-bottom: 0;
     padding: 40px 0;
 }
@@ -528,16 +646,39 @@ footer a:hover {
     color: #1F1F26;
 }
 
-@media (max-width: 750px) {
-    .blog header {
-        background-size: 60% auto, cover;
-    }
-}
-
 @media (max-width: 530px) {
-    .blog header {
-        background-size: 80% auto, cover;
+
+    h3 {
+        font-size: 22px;
     }
+
+    h4 {
+        font-size: 18px;
+    }
+
+    .small-caps {
+        font-size: 13px;
+    }
+
+    body {
+        font-size: 15px;
+    }
+
+    section.full-width {
+        margin: 0;
+        max-width: 100%;
+        width: 100%;
+        overflow: scroll;
+    }
+
+    .full-width img {
+        width: 100%;
+        height: 200px;
+        width: auto;
+        /* overflow: scroll; */
+        max-width: none;
+    }
+
     .project-grid {
       width: 100%;
       margin: 0 0 30px 0;
@@ -568,16 +709,8 @@ footer a:hover {
     }
 }
 
-@media (max-width: 430px) {
-    .blog header {
-        background-size: 90% auto, cover;
-    }
-}
-
 @media (max-width: 360px) {
-    .blog header {
-        background-size: 110% auto, cover;
-    }
+   
     header ul {
         font-size: 14px;
     }

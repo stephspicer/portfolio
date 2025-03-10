@@ -7,17 +7,93 @@
     <link href="css/style.css" rel="stylesheet" type="text/css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,500;0,700;1,700&family=Source+Serif+Pro:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
     <meta name="robots" content="noindex" />
     <meta name="description" content="Product design portfolio for Steph Spicer">
     <link rel="shortcut icon" href="favicon.ico">   
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const fadeInSections = document.querySelectorAll(".fade");
+
+      const fadeInOnScroll = () => {
+        const viewportHeight = window.innerHeight;
+        const thresholdTop = viewportHeight * 0.1; // top 10% of viewport
+        const thresholdBottom = viewportHeight * 0.9; // bottom 10% of viewport
+
+    fadeInSections.forEach((section) => {
+      const rect = section.getBoundingClientRect();
+
+      // Calculate opacity based on position in viewport
+      let opacity = 0;
+
+      if (rect.top >= thresholdTop && rect.bottom <= thresholdBottom) {
+        // Element is fully within the central 80% of the viewport
+        opacity = 1;
+        section.style.transform = "translateY(0)";
+      } else if (rect.top < thresholdBottom && rect.bottom > thresholdTop) {
+        // Element is in the outer 10% at the top or bottom - gradually fade
+        if (rect.top < thresholdTop) {
+          // Fading out towards the top of viewport
+          opacity = (rect.bottom - thresholdTop) / (viewportHeight * 0.2);
+        } else if (rect.bottom > thresholdBottom) {
+          // Fading out towards the bottom of viewport
+          opacity = (thresholdBottom - rect.top) / (viewportHeight * 0.2);
+        }
+      }
+
+      // Apply calculated opacity to the element
+      section.style.opacity = Math.max(0, Math.min(1, opacity));
+    });
+  };
+
+  // Initial check in case elements are already in view
+  fadeInOnScroll();
+
+  // Run fadeInOnScroll on scroll
+  window.addEventListener("scroll", fadeInOnScroll);
+});
+
+
+//start swap image script
+
+
+</script>
+    <style>
+        #h1{
+        color: var(--neutrals-content, #2A2C3C);
+        text-align: center;
+        font-family: Manrope;
+        font-size: 54px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 140%; 
+        letter-spacing: -1.08px;
+        }
+        .fade {
+         opacity: 0;
+         transform: translateY(20px); /* Add a slight upward translation */
+         transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade.visible {
+          opacity: 1;
+          transform: translateY(0); /* Reset translation */
+        }
+
+        
+
+
+
+
+    </style>
 </head>
 
 <body>
     <div class="site-wrap">
 
-        <!-- shout out to my friend Jesse, jessecorbett.com, for the wavy grid JS -->
 
         <section id="introcanvas">
             <div id="headertxt">
@@ -54,90 +130,80 @@
                 </ul>
             </div>
 
+
             <div class="header-container">
 
-               <section class="pink">
+               <section class="pink fade">
 
-                <h1 class="name">steph spicer</h1>
-                <h2> product designer with over 8 years of professional experience<br> currently working at <a href="https://upgrade.com" target="_blank">Upgrade</a>
+                <h1 class="name" id="h1">Steph Spicer </h1>
+                <h2>Hello! I'm an experienced, collaborative product designer <br> I love working on B2B and SaaS products, currently working in finance at <a href="https://upgrade.com" target="_blank">Upgrade</a>
                 </h2>
             </section>
 
-            <a href="#work" class="my-work-link"><h5> <img src="i/arrow.svg"> selected work</h5> </a>
-
-
+            
         </div>
 
-        <canvas id="grid-canvas"></canvas>
+        <!-- <canvas id="grid-canvas"></canvas> -->
 
     </section>
+            <section id="gradient-div"><br></section>
+
     <script src="js/grid.js"></script>
 
 
 
 </section>
 
-<section class="work featured" id="work">
 
-    <div class="row">
-        <div id="fetch" class="project-grid" onclick="location.href='fetch';">
-            <img src="i/fetch.jpg">
-            <div class="project-txt">
-                <h3>Fetch Food Delivery</h3>
-                <h4>Product design, 2021-2022</h4>
-            </div>
+<section class="home-project-feature">
+
+    <div class="container">
+       <!--  <span> Case Studies</span> -->
+      <div class="content fade">
+        <div class="content-item active" id="content-1">
+          <img src="i/ulogo.svg" alt="Logo 1">
+          <h2>From zero to $1 billion in loan origination</h2>
+          <p>Launched B2B2C home improvment loan product from being the sole designer to now managing a team of two designers fully supporting the resulting business.</p>
+          <button>View Project</button>
         </div>
-        <div id="spades" class="project-grid" onclick="location.href='photo-marketplace';">
-            <img src="i/photo-marketplace.jpg">
-            <div class="project-txt">
-                <h3>Photo Marketplace</h3>
-                <h4>UI Design, 2017</h4>
-            </div>
+        <div class="image-container">
+            <img src="i/image1.png" alt="Image 1" id="image">
         </div>
-       
     </div>
 
-
-    <div class="row">
-         <div id="ponder" class="project-grid" onclick="location.href='ponder';">
-            <img src="i/ponder.jpg">
-            <div class="project-txt">
-                <h3>Ponder</h3>
-                <h4>One-day challenge, 2021</h4>
-            </div>
-        </div>
-        <div id="commercebank" class="project-grid" onclick="location.href='commercebank';">
-            <img src="i/cb6.jpg">
-            <div class="project-txt">
-                <h3>Commerce Bank</h3>
-                <h4>Product design, 2018-2021</h4>
-            </div>
-        </div>
-       
+    <div class="content fade">
+        <div class="content-item" id="content-2">
+          <img src="i/ulogo.svg" alt="Logo 1">
+          <h2>Improving the home screen for a  multi-product fintech</h2><p>Upgrade started as a just a loan company, but years later after expanding to mobile banking, credit cards, and more, we improved the home screen’s usability, cross-sell, consistency, visual impact, load times, and scalability.</p>
+          <button>View Project</button>
+      </div>
+      <div class="image-container">
+        <img src="i/image2.png" alt="Image 1" id="image">
+    </div>
     </div>
 
- <div class="row">
-        <div id="commercehealthcare" class="project-grid" onclick="location.href='commercehealthcare';">
-            <img src="i/ch1.png">
-            <div class="project-txt">
-                <h3>CommerceHealthcare</h3>
-                <h4>Product design, 2018-2021</h4>
-            </div>
-        </div>
-        <div id="rainbowcare" class="project-grid" onclick="location.href='rainbowcare';">
-            <img src="i/rc2.png">
-            <div class="project-txt">
-                <h3>Rainbow Care</h3>
-                <h4>Product design, 2017-2018</h4>
-            </div>
-        </div>
-        
-        
+    <div class="content fade">
+        <div class="content-item" id="content-3">
+          <img src="i/ulogo.svg" alt="Logo 1">
+          <h2>True client and agency partnership</h2>
+          <p>Concepting & creating a paid revenue consultancy platform to allow the business to support clients in a more ongoing way.</p>
+          <button>View Project</button>
+      </div>
+      <div class="image-container">
+        <img src="i/image3.png" alt="Image 1" id="image">
+    </div>
+    </div>
+</div>
+
+
+</section>
+
+
     
 
 
 </section>
- <footer>
+ <footer class="fade">
     I'd love to hear from you – contact me via <a href="http://www.linkedin.com/in/spicer">LinkedIn</a> or <a href="mailto:stephaniehspicer@gmail.com">send me an email</a>
 </footer>
 
