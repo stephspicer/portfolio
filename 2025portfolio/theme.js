@@ -50,10 +50,10 @@ document.addEventListener('DOMContentLoaded', () => {
         // Element is in the outer 10% at the top or bottom - gradually fade
         if (rect.top < thresholdTop) {
           // Fading out towards the top of viewport
-          opacity = (rect.bottom - thresholdTop) / (viewportHeight * 0.2);
+          opacity = (rect.bottom - thresholdTop) / (viewportHeight * 0.25);
         } else if (rect.bottom > thresholdBottom) {
           // Fading out towards the bottom of viewport
-          opacity = (thresholdBottom - rect.top) / (viewportHeight * 0.2);
+          opacity = (thresholdBottom - rect.top) / (viewportHeight * 0.25);
         }
       }
 

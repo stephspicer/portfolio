@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="cow">
 
 <head>
  <title>Steph Spicer</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
 </head>
     <meta name="robots" content="noindex" />
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
@@ -32,10 +32,18 @@
         max-width: 33%;
     }
 
-    #SS {
-        fill: #9EA3FC;
+    svg {
+        fill: #735290;
     }
-    button {
+
+    .fade.quotebox {
+            grid-column: span 6;
+            position: relative;
+            padding: 1rem 5rem;
+            max-width: 870px;
+            margin: auto;
+        }
+    /*button {
         display: block;
         margin: 16px 0;
         padding: 16px;
@@ -60,167 +68,168 @@
             width: 800px;
             max-width: 100%;
         }
-
+*/
     </style>
     </style>
 </head>
 
 <body class="fetch project">
-    <div class="site-wrap">
-        <header id="introcanvas">
-            <div id="headertxt">
-                <a href="../" class="logo">
-                    <img src="../i/ssg.png" style="display:none">
-                    <div id="SS">
-                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="15px" height="25px" viewBox="0 0 15 25" enable-background="new 0 0 15 25" xml:space="preserve">
-                            <path d="M13.7,2.8C11.9,2,10,1.2,7.6,1.2c-1,0-1.9,0.2-2.7,0.5C4.1,2,3.4,2.4,2.8,2.9C2.1,3.5,1.6,4.1,1.3,4.8
-                C0.9,5.6,0.7,6.4,0.8,7.2C0.8,8.2,1,9,1.4,9.7c0.4,0.7,0.9,1.2,1.5,1.7c0.6,0.4,1.3,0.8,2,1.1c0.7,0.3,1.4,0.6,2.2,0.8
-                c0.8,0.3,1.5,0.5,2.2,0.8c0.7,0.3,1.2,0.6,1.7,0.9c0.5,0.3,0.8,0.7,1.1,1.2c0.3,0.4,0.4,1,0.4,1.6c0,0.5-0.1,1-0.3,1.5
-                c-0.2,0.5-0.5,0.9-1,1.2c-0.4,0.4-0.9,0.7-1.6,0.9c-0.6,0.2-1.3,0.3-2.1,0.3c-1.1,0-2.2-0.1-3.1-0.5c-1-0.3-1.9-0.7-2.6-1.2
-                l-0.5-0.3l-0.9,2.1l0.4,0.2c0.9,0.6,1.9,1.1,3.1,1.4C4.9,23.8,6.1,24,7.4,24c1.1,0,2-0.2,2.9-0.5c0.9-0.3,1.7-0.8,2.3-1.3
-                c0.1-0.1,0.2-0.2,0.3-0.3c0.5-0.5,0.9-1.1,1.2-1.7c0.4-0.8,0.5-1.6,0.5-2.5c0-1-0.2-1.9-0.6-2.6c-0.4-0.7-0.9-1.3-1.5-1.8
-                c-0.6-0.5-1.3-0.9-2-1.2c-0.7-0.3-1.5-0.6-2.2-0.8c-0.8-0.3-1.5-0.5-2.2-0.8C5.5,10.2,5,9.9,4.5,9.6c-0.4-0.3-0.8-0.7-1-1.1
-                C3.3,8.1,3.1,7.7,3.1,7.1c0-0.5,0.1-0.9,0.3-1.4c0.2-0.4,0.4-0.7,0.7-1l0.1-0.1C4.6,4.3,5.1,4,5.6,3.8c0.6-0.2,1.3-0.3,2-0.3
-                c2,0,3.8,0.8,5.6,1.6c0.2,0.1,0.4,0.2,0.6,0.3l0.4-2.3C14.1,3,13.9,2.9,13.7,2.8z" />
-                        </svg>
-                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="15px" height="25px" viewBox="0 0 15 25" enable-background="new 0 0 15 25" xml:space="preserve">
-                            <path d="M13.9,3.3c-0.8-0.6-1.7-1.1-2.8-1.4c-1-0.4-2.2-0.6-3.5-0.6c-1,0-1.9,0.1-2.7,0.3C4.1,1.8,3.3,2.2,2.7,2.7
-              C2.1,3.2,1.5,3.8,1.1,4.5C0.7,5.2,0.5,6,0.5,6.9c0,0.9,0.1,1.8,0.5,2.5c0.4,0.7,0.8,1.3,1.4,1.8c0.6,0.5,1.2,0.9,2,1.2
-              C5,12.7,5.8,13,6.5,13.3c0.8,0.3,1.5,0.6,2.1,0.9c0.6,0.3,1.2,0.6,1.6,1c0.4,0.4,0.8,0.8,1,1.2c0.2,0.4,0.3,1,0.3,1.6
-              c0,0.5-0.1,1-0.4,1.4c-0.2,0.5-0.6,0.9-1,1.2c-0.4,0.3-1,0.6-1.6,0.8c-0.6,0.2-1.3,0.3-2.1,0.2c-1.1,0-2.1-0.4-3-0.8
-              c-0.8-0.3-1.5-0.7-2.2-1.1L0.7,22c0.2,0.1,0.5,0.3,0.7,0.4c1.4,0.7,3,1.4,4.9,1.5c1.1,0,2.1-0.1,3-0.4c0.9-0.3,1.7-0.7,2.4-1.2
-              c0.7-0.5,1.2-1.2,1.6-1.9c0.4-0.8,0.6-1.6,0.7-2.5c0-1-0.1-1.9-0.5-2.6c-0.3-0.7-0.8-1.3-1.4-1.8c-0.6-0.5-1.2-0.9-2-1.3
-              c-0.7-0.3-1.4-0.7-2.2-0.9c-0.8-0.3-1.5-0.6-2.1-0.9c-0.6-0.3-1.2-0.6-1.6-1c-0.4-0.3-0.7-0.7-1-1.1C2.9,7.9,2.9,7.4,2.9,6.9
-              C2.9,6.4,3,6,3.2,5.5c0.2-0.4,0.4-0.8,0.9-1.1C4.5,4.1,5,3.9,5.5,3.7c0.6-0.2,1.3-0.3,2-0.2c0.9,0,1.8,0.2,2.7,0.5
-              c1,0.4,1.8,0.8,2.5,1.2l0.5,0.3l1-2L13.9,3.3z" />
-                        </svg>
-                    </div>
-                    <span>steph spicer</span> </a>
-                <ul>
-                    <li><a href="http://www.linkedin.com/in/spicer">LinkedIn</a></li>
-                    <li><a href="mailto:stephaniehspicer@gmail.com">Email</a></li>
-                </ul>
-            </div>
-        </header>
-        <section id="overview">
-            <h1>Fetch</h1>
-            <h2>Product design, 2021-2022</h2> 
-             <p>
-                Fetch is a fictional brand for a client’s restaurant delivery web app. This project was designed to be built as a theme-able, brand-able application, so our focus — myself and another designer on the project — was a clean base UI, strong UX and a flexible design file setup. We created a robust design system in Figma that allows for multiple theme switching along with Atlas Theme Switcher and Figma Design Tokens in JSON that we exported to our developers to support a similar theme switching capability in the site build.
-            </p>
-        
-        </section>
-        <section>
-            <h3>Desktop Designs</h3>
-           
+   <div class="site-wrap">
+       <header>
+        <div class="name">
+<a class="logo" href="../">
+            <svg width="136" height="103" viewBox="0 0 136 103" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M23.9095 90.0302C18.9675 87.243 14.9978 83.8692 12.0005 79.9087C9.0032 75.9483 7.14433 71.5443 6.42392 66.6966L18.087 64.3917C18.8553 68.2794 20.212 71.5613 22.1571 74.2374C24.2193 76.8809 26.9352 79.1528 30.3048 81.0532C31.6526 81.8133 32.9726 82.3604 34.2647 82.6943C35.6739 82.9956 36.9804 83.0415 38.1842 82.8322C39.4628 82.665 40.5801 82.2588 41.5362 81.6137C42.5344 80.8936 43.3503 79.972 43.9837 78.8488C45.0817 76.9019 45.2572 74.9283 44.5102 72.9278C44.057 71.9814 43.1757 70.7441 41.8662 69.216C40.6738 67.6552 38.9946 65.82 36.8288 63.7103C33.1193 60.1377 30.2804 56.8588 28.3122 53.8736C26.3441 50.8884 25.118 48.0749 24.6339 45.4332C24.3131 43.377 24.3551 41.3774 24.76 39.4345C25.2072 37.4166 26.0009 35.3969 27.1411 33.3751C28.5347 30.9041 30.3257 28.9533 32.5143 27.5228C34.8199 26.0596 37.331 25.1071 40.0476 24.6653C42.8813 24.1908 45.8034 24.2597 48.8138 24.8718C51.8991 25.5262 54.9019 26.6769 57.8222 28.3239C60.5928 29.8864 63.1147 31.8022 65.3881 34.0713C67.7363 36.3826 69.6699 38.9042 71.1888 41.636C72.7077 44.3679 73.6239 46.7815 74.2108 49.765C72.5118 50.0975 62.8858 51.8955 62.8858 51.8955C62.3256 50.2703 61.6533 48.691 60.8075 47.1807C59.7936 45.1284 58.5945 43.3171 57.2101 41.7468C55.8257 40.1765 54.4222 38.9901 52.9995 38.1877C51.427 37.3009 49.9198 36.6483 48.478 36.2299C47.0361 35.8115 45.697 35.6484 44.4606 35.7407C43.2991 35.8752 42.2403 36.265 41.2842 36.9102C40.3282 37.5554 39.5334 38.4395 38.9 39.5627C38.4259 40.5784 38.1226 41.6411 37.9903 42.7508C37.975 43.8278 38.1729 44.877 38.5838 45.8984C39.0696 46.9619 39.9462 48.2952 41.2135 49.8982C42.4807 51.5012 44.2184 53.3201 46.4265 55.355C49.6214 58.4399 52.0792 61.2571 53.7996 63.8066C55.6372 66.3233 56.845 68.7317 57.4231 71.0317C58.1183 73.299 58.2376 75.5376 57.7809 77.7474C57.3241 79.9572 56.4412 82.2228 55.1321 84.544C53.2317 87.9136 50.5479 90.3972 47.0808 91.9949C43.7307 93.5599 40.0235 94.1833 35.9591 93.865C31.8947 93.5467 27.8782 92.2684 23.9095 90.0302Z" fill="#"/>
+<path d="M79.9549 75.0032C75.0128 72.216 71.0431 68.8422 68.0458 64.8817C65.0485 60.9213 63.7756 56.183 62.801 51.4958L74.126 49.3658C74.9462 53.2266 76.2573 56.5343 78.2024 59.2104C80.2646 61.8539 82.9805 64.1258 86.3501 66.0262C87.6979 66.7863 89.0179 67.3333 90.31 67.6673C91.7192 67.9686 93.0257 68.0145 94.2295 67.8051C95.5081 67.638 96.6254 67.2318 97.5815 66.5867C98.5797 65.8666 99.3956 64.945 100.029 63.8218C101.127 61.8749 101.303 59.9013 100.556 57.9008C100.102 56.9544 99.221 55.7171 97.9115 54.189C96.7191 52.6282 95.04 50.793 92.8741 48.6832C89.1646 45.1107 86.3257 41.8318 84.3576 38.8466C82.3894 35.8613 81.1633 33.0479 80.6792 30.4062C80.3584 28.35 80.4005 26.3504 80.8054 24.4075C81.2525 22.3896 82.0462 20.3698 83.1864 18.3481C84.58 15.8771 86.3711 13.9263 88.5596 12.4958C90.8652 11.0326 93.3764 10.0801 96.0929 9.63828C98.9266 9.1638 101.849 9.23265 104.859 9.8448C107.944 10.4992 110.947 11.6499 113.868 13.2969C116.638 14.8594 119.16 16.7752 121.433 19.0443C123.782 21.3556 125.715 23.8772 127.234 26.609C128.753 29.3409 129.75 32.1236 130.224 34.9573L119.48 38.5207C118.86 36.2956 117.984 34.1733 116.853 32.1537C115.839 30.1014 114.64 28.2901 113.255 26.7198C111.871 25.1494 110.468 23.9631 109.045 23.1607C107.472 22.2739 105.965 21.6212 104.523 21.2029C103.081 20.7845 101.742 20.6214 100.506 20.7137C99.3444 20.8482 98.2856 21.238 97.3296 21.8832C96.3735 22.5283 95.5788 23.4125 94.9453 24.5357C94.4712 25.5514 94.168 26.6141 94.0356 27.7238C94.0203 28.8008 94.2182 29.85 94.6291 30.8714C95.115 31.9349 95.9915 33.2682 97.2588 34.8712C98.5261 36.4742 100.264 38.2931 102.472 40.328C105.667 43.4129 108.124 46.2301 109.845 48.7795C111.683 51.2963 112.89 53.7047 113.468 56.0047C114.164 58.272 114.283 60.5106 113.826 62.7204C113.369 64.9302 112.487 67.1958 111.177 69.517C109.277 72.8866 106.593 75.3702 103.126 76.9679C99.7761 78.5329 96.0688 79.1563 92.0044 78.838C87.94 78.5196 83.9235 77.2414 79.9549 75.0032Z" fill="#"/>
+</svg>
+    </a>
+<div id="theme-switcher">
+    <button data-theme="cow">🐄</button>
+    <button data-theme="crow">🐦‍⬛</button>
 
-            <img src="i/fetch_desktop01.jpeg" class="shadow">
-            <img src="i/fetch_desktop02.jpeg" class="shadow">
-            <br>
-            <img src="i/fetch_desktop05.jpeg" class="shadow">
-            <img src="i/fetch_desktop03.jpg" class="shadow">
-            <br>
-            <img src="i/fetch_desktop04.jpeg" class=" shadow">
-            <img src="i/fetch_desktop06.jpeg" class=" shadow">
-            <br><br>
-            <h3>Mobile Designs</h3>
-            <img src="i/fetch_m01.jpeg" class="inline shadow">
-            <img src="i/fetch_m02.jpeg" class="inline shadow">
-            <img src="i/fetch_m03.jpeg" class="inline shadow">
-            <img src="i/fetch_m04.jpeg" class="inline shadow">
-            <img src="i/fetch_m05.jpeg" class="inline shadow">
-            <img src="i/fetch_m06.jpeg" class="inline shadow">
-            <br><br><br>
-
-            <h3>Prototype</h3>
-        </section>
-
-            <section class="video" id="video">
-                <video Autoplay=autoplay muted controls>
-                    <source src="i/ddprototype.mov" type="video/mp4" class="inline">
-                    </video>
-            </section>
-            <br><br>
-           <section>
-
-            <h3>Design System</h3>
-
-            <p>
-                A sample of the design system set up to support theme switching and design tokens. The design tokens also include spacing, borders, shadows, breakpoints, etc.
-
-                <a href="designsystem"><button> See more of this design system </button></a>
-
-            </p>
-
-            <img src="i/colors.jpeg">
-            <img src="i/typography.jpeg">
-            <br>
-
+  </div>
             
-             <h3>Design System Theme Switching</h3>
-        </section>
-           
 
-            <section class="video" id="video">
+
+        <p class="name primary-color">steph spicer</p>
+    </div>
+        <nav>
+              <a href="#work">work</a> 
+              <a href="#about">about</a> 
+              <a href="#contact">contact</a> 
+        </nav>
+    </header>
+    
+
+        <section id="overview" class="fade">
+                <h1>One app, three brands: theming tokens before Figma variables</h1>
+                
+                 <p class="left">
+                    We built a theme-able design system foundation and the core user experience for a client managing multiple food delivery brands, navigating the limits of 2021 Figma through close collaboration and a token-based approach and working with developers to ensure scalability, knowing a 4th unknown brand may be coming.
+ 
+                </p> 
+
+                <span class="badge">B2C Product Design</span> 
+                <span class="badge">Client work</span> 
+
+                <div class="hero-img"><img src="i/hero.png" class="fade"></div>
+
+                 <div class="summarybox grid fade">
+                <h2 class="small-caps">Overview</h2> 
+
+                 <div class="two-col">
+                    <h4>My Role</h5>
+                    <p>Product Designer allocated 50%</p>
+                </div> 
+                <div class="two-col">
+                    <h4>Timeline</h5>
+                    <p>6 months engagement, 2021-2022</p>
+                </div>
+                
+                <div class="four-col">
+                    <h4>Key Tools</h5>
+                    <p>Figma</p>
+                    <p>Atlas Theme Switcher & Design Tokens plugins with JSON exports</p>
+                </div>
+               
+                
+            </div>
+
+
+            </section>
+
+            <section class="fade grid less-margin">
+                <div class="project-content four-col fade">
+                    <h2 class="small-caps">Context & Challenge</h2>
+                    <h3>A single platform was needed to unite three distinct food delivery brands</h3>
+                    <p>After a three company merger, our clients needed to build a new platform to address the needs of all of their users. They had three different brands, brand loyalty, and wanted to retain each brand and improve their UX, without the technical burden of maintaining separate platforms for each. They partnered with Crema to design and architect this new foundation. <b>The goal was one clean and competitively featured food delivery app UX for all three brands that could visually adapt and even prepare for a fourth unknown brand in the future.</b></p>
+                    <p>I partnered closely with another Product Designer on this project. We were each allocated at 50% of our time. Our broader team included a Product Manager, Test Engineer, and the development team who would bring our designs to life.</p>
+                </div>
+                <div class="flex two-col fade">
+                    <div class="flex-col">
+                        <img src="i/multibrand.png">
+                    </div>
+                </div>
+            </section>
+
+           
+            <section class="fade less-margin">
+                <h2 class="small-caps">Discovery & Approach</h2>
+                <h3>Plugin experimentation led to a token-based theming solution for the UI with JSON exports</h3>
+
+                <p>In 2021, native Figma features for theme management like variables and modes did not exist. We needed a robust way to manage distinct visual styles and deliver intuitive core flows, all within a single Figma library ensure developers could replicate this efficiently.</p>
+
+                <p>The foundation and alignment with eng would be key to meeting all our goals for the 6-month deadline, so we spent several weeks focusing on finding the best approach in collab with our front-end peers. After research and experimentation, we settled on using the <b>Atlas Theme Switcher plugin</b> to manage the visual brand swaps directly within our Figma library – colors, type styles, and logos. </p>
+
+                <p><b>We architected the entire system and design file around design tokens</b>, meticulously defining base values for each brand and also for everything else, from spacing units to shadows. But Atlas didn't come with development integration, so after I explored a number of options, we used the <b>Design Tokens plugin to export our tokens as a JSON file</b>. Our dev team were able to implement a parallel theme-switching mechanism in the codebase for the components powering our designed user flows, mirroring our Figma setup.</p>
+            </section>
+
+            <section class="video fade" id="video">
                 <video Autoplay=autoplay muted controls>
                     <source src="i/themeswap.mov" type="video/mp4" class="inline">
                     </video>
             </section>
 
 
-           <div class="more-projects">
-                  <section class="work featured">
-                    <h2>View another project</h2>
-                    <div class="row">
-                        <a id="fetch" class="project-grid current" href="/fetch">
-                            <img src="../i/fetch.jpg">
-                            <div class="project-txt">
-                                <span class="project-name">Fetch</span>
-                            </div>
-                        </a>
-                        <a id="ponder" class="project-grid" href="/ponder">
-                            <img src="../i/ponder.jpg">
-                            <div class="project-txt">
-                                <span class="project-name">Ponder</span>
-                            </div>
-                        </a>
-                        <a id="commercebank" class="project-grid" onclick="location.href='/commercebank';">
-                            <img src="../i/cb6.jpg">
-                            <div class="project-txt">
-                                <span class="project-name">Commerce Bank</span>
-                            </div>
-                        </a>
+            <section class="fade">
+                <h2 class="small-caps">Design Approach</h2>
+                <h3>We designed the core food delivery experience while co-creating the design system</h3>
+                <p>My design partner and I worked in lockstep, tackling both the user experience and the system architecture. We designed all key screens and flows necessary for a food delivery service, including <b>restaurant discovery and search, menu browsing, order customization, account creation and management, checkout, and order tracking</b>. We focused on creating an intuitive and clear path for users through each stage, prototyping and refining these core interactions using our placeholder "Fetch" brand as the neutral base.</p>
+
+                <p>This foundational UX work happened in parallel with building the design system, but once the design system groundwork was done, our UI work was much easier. Our collaboration was fluid, allowing us to critique flows, brainstorm UI solutions, and build components together. By the project's end, our individual contributions had totally blended, resulting in a stronger, unified product experience we were both proud of and couldn't even recall who had designed which pieces. </p>
+                <div class="six-col">
+                    <img src="features.jpg">
+                </div>
+            </section>
+
+            
+         
+
+            <section class="fade grid grid-w-rows">
+                <div class="project-content six-col fade">
+                    <h2 class="small-caps">Outcome</h2>
+                    <h3>We delivered a scalable multi-brand platform foundation and core user experience</h3>
+                    <p>The collaboration on this project made us really successful. We were able to meet what felt like an ambitious deadline, even a bit ahead of schedule. And after all our work breaking down themeing, and later documenting every state for each component, the final product looked exactly like our designs. I had a lot of fun exploring this space. Our eventual solution would have been so much easier with today's Figma features, but it was exciting to work on something that requires creative problem solving.</p>
+
+                </div>
+                <div class="six-col flex">
+                    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/proto/O8Q7e8T06Doy2pMOzTwIqH/Fetch---Design-System?page-id=2253%3A34243&node-id=2281-40296&viewport=-775%2C1537%2C0.37&scaling=contain&content-scaling=fixed&starting-point-node-id=2281%3A40296&embed-host=share" allowfullscreen></iframe>
+                </div>
+                <div class="six-col">
+                     <figcaption class="insight">With the extra time from finishing on schedule, my co-designer (shout out Mary Carnes) led putting together this documentation prototype for the design system for client hand-off. While the wonderful organization work credit is all hers, it highlights the token approach, design system, and UI components work we did together.</figcaption>
+                 </div>
+            </section>
+
+
+            
+
+            <section class="">
+                <h3 class="two-col">💌 Kind words from collaborators</h2>
+                <p>This project was a rewarding experience in designing a complete product experience while simultaneously overcoming technical constraints through creative problem-solving and teamwork. It highlighted how powerful close partnership between designers, and between design and development, can be in building complex, high-quality digital products.</p>
+                    <div class="quotebox fade">
+                        It's obvious that your Waitr work is phenomenal, but just to provide a personal comparison... I worked for a company that had a whole team of like 10 people working on its design system... The level of organization and the ease of handoff... that you have put in to Waitr **knocks that system out of the park.**
+                    <br> <i>– Front-end dev on the project</i>
                     </div>
-                    <div class="row">
+                <br>
+                
+            </section>
 
-                        <a id="commercehealthcare" class="project-grid" onclick="location.href='/commercehealthcare';">
-                            <img src="../i/ch1.png">
-                            <div class="project-txt">
-                                <span class="project-name">CommerceHealthcare</span>
-                            </div>
-                        </a>
+            <section class="fade grid">
+                 <div class="project-content six-col ">
+                    <h3>Thanks for reading!</h3>
 
-                        <a id="rainbowcare" class="project-grid" href="/rainbowcare">
-                            <img src="../i/rc2.png">
-                            <div class="project-txt">
-                                <span class="project-name">Rainbow Care</span>
-                            </div>
-                        </a>
-                        <a id="marketplace" class="project-grid " href="/photo-marketplace">
-                            <img src="../i/photo-marketplace.jpg">
-                            <div class="project-txt">
-                                <span class="project-name">Photo Marketplace</span>
-                            </div>
-                        </a>
+                    <p><form action="../"><button href="../">Return to Home</button></form></p>
+                </div>
 
-                    </div>
+               
+            </section>
 
+            
 
-                </section>
-            </div>
+            
 
             <footer>
-                I'd love to hear from you – contact me via <a href="http://www.linkedin.com/in/spicer">LinkedIn</a> or <a href="mailto:stephaniehspicer@gmail.com">send me an email</a>
+                Made with 🖤 and plain old html/css/js. Want to talk about working together? <a href="http://www.linkedin.com/in/spicer">Find me on LinkedIn</a> or <a href="mailto:stephaniehspicer@gmail.com">send me an email</a>
             </footer>
         </div>
         
