@@ -25,3 +25,49 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+
+/*FADE IN SCRIPT*/
+    document.addEventListener("DOMContentLoaded", function () {
+      const fadeInSections = document.querySelectorAll(".fade");
+
+      const fadeInOnScroll = () => {
+        const viewportHeight = window.innerHeight;
+        const thresholdTop = viewportHeight * 0.1; // top 10% of viewport
+        const thresholdBottom = viewportHeight * 0.9; // bottom 10% of viewport
+
+    fadeInSections.forEach((section) => {
+      const rect = section.getBoundingClientRect();
+
+      // Calculate opacity based on position in viewport
+      let opacity = 0;
+
+      if (rect.top >= thresholdTop && rect.bottom <= thresholdBottom) {
+        // Element is fully within the central 80% of the viewport
+        opacity = 1;
+        section.style.transform = "translateY(0)";
+      } else if (rect.top < thresholdBottom && rect.bottom > thresholdTop) {
+        // Element is in the outer 10% at the top or bottom - gradually fade
+        if (rect.top < thresholdTop) {
+          // Fading out towards the top of viewport
+          opacity = (rect.bottom - thresholdTop) / (viewportHeight * 0.2);
+        } else if (rect.bottom > thresholdBottom) {
+          // Fading out towards the bottom of viewport
+          opacity = (thresholdBottom - rect.top) / (viewportHeight * 0.2);
+        }
+      }
+
+      // Apply calculated opacity to the element
+      section.style.opacity = Math.max(0, Math.min(1, opacity));
+    });
+  };
+
+  // Initial check in case elements are already in view
+  fadeInOnScroll();
+
+  // Run fadeInOnScroll on scroll
+  window.addEventListener("scroll", fadeInOnScroll);
+});
+
+
+

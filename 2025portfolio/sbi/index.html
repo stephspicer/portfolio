@@ -13,7 +13,17 @@
     <meta name="description" content="Product design portfolio for Steph Spicer">
     <link rel="shortcut icon" href="favicon.ico">   
     <style> 
-        div>.inline {
+
+        :root { --page-accent: #3591CF;}
+        .fade.quotebox {
+            grid-column: span 6;
+            position: relative;
+            padding: 1rem 5rem;
+            max-width: 870px;
+            margin: auto;
+        }
+   
+        /*div>.inline {
             max-width: 39%;
         }
         h3 {
@@ -49,65 +59,150 @@
         video {
             width: 800px;
             max-width: 100%;
-        }
+        }*/
     </style>
 </style>
 </head>
 
-<body class="project sbi">
+<body class="upgrade-customers project">
     <div class="site-wrap">
-        <header id="introcanvas">
-            <div id="headertxt">
-                <a href="../" class="logo">
-                    <img src="../i/ssg.png" style="display:none">
-                    <div id="SS">
-                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="15px" height="25px" viewBox="0 0 15 25" enable-background="new 0 0 15 25" xml:space="preserve">
-                            <path d="M13.7,2.8C11.9,2,10,1.2,7.6,1.2c-1,0-1.9,0.2-2.7,0.5C4.1,2,3.4,2.4,2.8,2.9C2.1,3.5,1.6,4.1,1.3,4.8
-                            C0.9,5.6,0.7,6.4,0.8,7.2C0.8,8.2,1,9,1.4,9.7c0.4,0.7,0.9,1.2,1.5,1.7c0.6,0.4,1.3,0.8,2,1.1c0.7,0.3,1.4,0.6,2.2,0.8
-                            c0.8,0.3,1.5,0.5,2.2,0.8c0.7,0.3,1.2,0.6,1.7,0.9c0.5,0.3,0.8,0.7,1.1,1.2c0.3,0.4,0.4,1,0.4,1.6c0,0.5-0.1,1-0.3,1.5
-                            c-0.2,0.5-0.5,0.9-1,1.2c-0.4,0.4-0.9,0.7-1.6,0.9c-0.6,0.2-1.3,0.3-2.1,0.3c-1.1,0-2.2-0.1-3.1-0.5c-1-0.3-1.9-0.7-2.6-1.2
-                            l-0.5-0.3l-0.9,2.1l0.4,0.2c0.9,0.6,1.9,1.1,3.1,1.4C4.9,23.8,6.1,24,7.4,24c1.1,0,2-0.2,2.9-0.5c0.9-0.3,1.7-0.8,2.3-1.3
-                            c0.1-0.1,0.2-0.2,0.3-0.3c0.5-0.5,0.9-1.1,1.2-1.7c0.4-0.8,0.5-1.6,0.5-2.5c0-1-0.2-1.9-0.6-2.6c-0.4-0.7-0.9-1.3-1.5-1.8
-                            c-0.6-0.5-1.3-0.9-2-1.2c-0.7-0.3-1.5-0.6-2.2-0.8c-0.8-0.3-1.5-0.5-2.2-0.8C5.5,10.2,5,9.9,4.5,9.6c-0.4-0.3-0.8-0.7-1-1.1
-                            C3.3,8.1,3.1,7.7,3.1,7.1c0-0.5,0.1-0.9,0.3-1.4c0.2-0.4,0.4-0.7,0.7-1l0.1-0.1C4.6,4.3,5.1,4,5.6,3.8c0.6-0.2,1.3-0.3,2-0.3
-                            c2,0,3.8,0.8,5.6,1.6c0.2,0.1,0.4,0.2,0.6,0.3l0.4-2.3C14.1,3,13.9,2.9,13.7,2.8z" />
-                        </svg>
-                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="15px" height="25px" viewBox="0 0 15 25" enable-background="new 0 0 15 25" xml:space="preserve">
-                            <path d="M13.9,3.3c-0.8-0.6-1.7-1.1-2.8-1.4c-1-0.4-2.2-0.6-3.5-0.6c-1,0-1.9,0.1-2.7,0.3C4.1,1.8,3.3,2.2,2.7,2.7
-                            C2.1,3.2,1.5,3.8,1.1,4.5C0.7,5.2,0.5,6,0.5,6.9c0,0.9,0.1,1.8,0.5,2.5c0.4,0.7,0.8,1.3,1.4,1.8c0.6,0.5,1.2,0.9,2,1.2
-                            C5,12.7,5.8,13,6.5,13.3c0.8,0.3,1.5,0.6,2.1,0.9c0.6,0.3,1.2,0.6,1.6,1c0.4,0.4,0.8,0.8,1,1.2c0.2,0.4,0.3,1,0.3,1.6
-                            c0,0.5-0.1,1-0.4,1.4c-0.2,0.5-0.6,0.9-1,1.2c-0.4,0.3-1,0.6-1.6,0.8c-0.6,0.2-1.3,0.3-2.1,0.2c-1.1,0-2.1-0.4-3-0.8
-                            c-0.8-0.3-1.5-0.7-2.2-1.1L0.7,22c0.2,0.1,0.5,0.3,0.7,0.4c1.4,0.7,3,1.4,4.9,1.5c1.1,0,2.1-0.1,3-0.4c0.9-0.3,1.7-0.7,2.4-1.2
-                            c0.7-0.5,1.2-1.2,1.6-1.9c0.4-0.8,0.6-1.6,0.7-2.5c0-1-0.1-1.9-0.5-2.6c-0.3-0.7-0.8-1.3-1.4-1.8c-0.6-0.5-1.2-0.9-2-1.3
-                            c-0.7-0.3-1.4-0.7-2.2-0.9c-0.8-0.3-1.5-0.6-2.1-0.9c-0.6-0.3-1.2-0.6-1.6-1c-0.4-0.3-0.7-0.7-1-1.1C2.9,7.9,2.9,7.4,2.9,6.9
-                            C2.9,6.4,3,6,3.2,5.5c0.2-0.4,0.4-0.8,0.9-1.1C4.5,4.1,5,3.9,5.5,3.7c0.6-0.2,1.3-0.3,2-0.2c0.9,0,1.8,0.2,2.7,0.5
-                            c1,0.4,1.8,0.8,2.5,1.2l0.5,0.3l1-2L13.9,3.3z" />
-                        </svg>
-                    </div>
-                    <span>steph spicer</span> </a>
-                    <ul>
-                        <li><a href="http://www.linkedin.com/in/spicer">LinkedIn</a></li>
-                        <li><a href="mailto:stephaniehspicer@gmail.com">Email</a></li>
-                    </ul>
-                </div>
-            </header>
+       <header>
+        <div class="name">
+<a class="logo" href="../">
+            <svg width="136" height="103" viewBox="0 0 136 103" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M23.9095 90.0302C18.9675 87.243 14.9978 83.8692 12.0005 79.9087C9.0032 75.9483 7.14433 71.5443 6.42392 66.6966L18.087 64.3917C18.8553 68.2794 20.212 71.5613 22.1571 74.2374C24.2193 76.8809 26.9352 79.1528 30.3048 81.0532C31.6526 81.8133 32.9726 82.3604 34.2647 82.6943C35.6739 82.9956 36.9804 83.0415 38.1842 82.8322C39.4628 82.665 40.5801 82.2588 41.5362 81.6137C42.5344 80.8936 43.3503 79.972 43.9837 78.8488C45.0817 76.9019 45.2572 74.9283 44.5102 72.9278C44.057 71.9814 43.1757 70.7441 41.8662 69.216C40.6738 67.6552 38.9946 65.82 36.8288 63.7103C33.1193 60.1377 30.2804 56.8588 28.3122 53.8736C26.3441 50.8884 25.118 48.0749 24.6339 45.4332C24.3131 43.377 24.3551 41.3774 24.76 39.4345C25.2072 37.4166 26.0009 35.3969 27.1411 33.3751C28.5347 30.9041 30.3257 28.9533 32.5143 27.5228C34.8199 26.0596 37.331 25.1071 40.0476 24.6653C42.8813 24.1908 45.8034 24.2597 48.8138 24.8718C51.8991 25.5262 54.9019 26.6769 57.8222 28.3239C60.5928 29.8864 63.1147 31.8022 65.3881 34.0713C67.7363 36.3826 69.6699 38.9042 71.1888 41.636C72.7077 44.3679 73.6239 46.7815 74.2108 49.765C72.5118 50.0975 62.8858 51.8955 62.8858 51.8955C62.3256 50.2703 61.6533 48.691 60.8075 47.1807C59.7936 45.1284 58.5945 43.3171 57.2101 41.7468C55.8257 40.1765 54.4222 38.9901 52.9995 38.1877C51.427 37.3009 49.9198 36.6483 48.478 36.2299C47.0361 35.8115 45.697 35.6484 44.4606 35.7407C43.2991 35.8752 42.2403 36.265 41.2842 36.9102C40.3282 37.5554 39.5334 38.4395 38.9 39.5627C38.4259 40.5784 38.1226 41.6411 37.9903 42.7508C37.975 43.8278 38.1729 44.877 38.5838 45.8984C39.0696 46.9619 39.9462 48.2952 41.2135 49.8982C42.4807 51.5012 44.2184 53.3201 46.4265 55.355C49.6214 58.4399 52.0792 61.2571 53.7996 63.8066C55.6372 66.3233 56.845 68.7317 57.4231 71.0317C58.1183 73.299 58.2376 75.5376 57.7809 77.7474C57.3241 79.9572 56.4412 82.2228 55.1321 84.544C53.2317 87.9136 50.5479 90.3972 47.0808 91.9949C43.7307 93.5599 40.0235 94.1833 35.9591 93.865C31.8947 93.5467 27.8782 92.2684 23.9095 90.0302Z" fill="#"/>
+<path d="M79.9549 75.0032C75.0128 72.216 71.0431 68.8422 68.0458 64.8817C65.0485 60.9213 63.7756 56.183 62.801 51.4958L74.126 49.3658C74.9462 53.2266 76.2573 56.5343 78.2024 59.2104C80.2646 61.8539 82.9805 64.1258 86.3501 66.0262C87.6979 66.7863 89.0179 67.3333 90.31 67.6673C91.7192 67.9686 93.0257 68.0145 94.2295 67.8051C95.5081 67.638 96.6254 67.2318 97.5815 66.5867C98.5797 65.8666 99.3956 64.945 100.029 63.8218C101.127 61.8749 101.303 59.9013 100.556 57.9008C100.102 56.9544 99.221 55.7171 97.9115 54.189C96.7191 52.6282 95.04 50.793 92.8741 48.6832C89.1646 45.1107 86.3257 41.8318 84.3576 38.8466C82.3894 35.8613 81.1633 33.0479 80.6792 30.4062C80.3584 28.35 80.4005 26.3504 80.8054 24.4075C81.2525 22.3896 82.0462 20.3698 83.1864 18.3481C84.58 15.8771 86.3711 13.9263 88.5596 12.4958C90.8652 11.0326 93.3764 10.0801 96.0929 9.63828C98.9266 9.1638 101.849 9.23265 104.859 9.8448C107.944 10.4992 110.947 11.6499 113.868 13.2969C116.638 14.8594 119.16 16.7752 121.433 19.0443C123.782 21.3556 125.715 23.8772 127.234 26.609C128.753 29.3409 129.75 32.1236 130.224 34.9573L119.48 38.5207C118.86 36.2956 117.984 34.1733 116.853 32.1537C115.839 30.1014 114.64 28.2901 113.255 26.7198C111.871 25.1494 110.468 23.9631 109.045 23.1607C107.472 22.2739 105.965 21.6212 104.523 21.2029C103.081 20.7845 101.742 20.6214 100.506 20.7137C99.3444 20.8482 98.2856 21.238 97.3296 21.8832C96.3735 22.5283 95.5788 23.4125 94.9453 24.5357C94.4712 25.5514 94.168 26.6141 94.0356 27.7238C94.0203 28.8008 94.2182 29.85 94.6291 30.8714C95.115 31.9349 95.9915 33.2682 97.2588 34.8712C98.5261 36.4742 100.264 38.2931 102.472 40.328C105.667 43.4129 108.124 46.2301 109.845 48.7795C111.683 51.2963 112.89 53.7047 113.468 56.0047C114.164 58.272 114.283 60.5106 113.826 62.7204C113.369 64.9302 112.487 67.1958 111.177 69.517C109.277 72.8866 106.593 75.3702 103.126 76.9679C99.7761 78.5329 96.0688 79.1563 92.0044 78.838C87.94 78.5196 83.9235 77.2414 79.9549 75.0032Z" fill="#"/>
+</svg>
+    </a>
+<div id="theme-switcher">
+    <button data-theme="cow">🐄</button>
+    <button data-theme="crow">🐦‍⬛</button>
+
+  </div>
+            
+
+
+        <p class="name primary-color">steph spicer</p>
+    </div>
+        <nav>
+              <a href="#work">work</a> 
+              <a href="#about">about</a> 
+              <a href="#contact">contact</a> 
+        </nav>
+    </header>
             <section id="overview">
-                <h1>SBI</h1>
-                <h2>Product design, 2021-2022</h2> 
-                <!-- <p>
-                    gives each designer on the team a single Friday to design as much of a fictional product that we come up with as possible. For the 2021 challenge, the prompt was simply that we’d all design a native mobile app. No screens can be started prior to the morning of, only concept and branding. With my time during the day I had the chance to explore different color combinations and Figma animations than I usually work with.
-                </p> -->
+                <h1>Visualizing revenue potential with a data centric consulting portal</h1>
+                
+                 <p class="left">
+                    A zero to one client project concepting and building a digital consulting platform to help their clients follow a plan to maximize revenue 
+                </p> 
+
+                <span class="badge">B2B Product Design</span> <span class="badge">Client work</span> 
+
+                <img src="i/header.jpg" class="fade">
+
+                 <div class="summarybox grid fade">
+                <h2 class="small-caps">Overview</h2> 
+
+                 <div class="two-col">
+                    <h4>My Role</h5>
+                    <p>Lead Designer</p>
+                </div> 
+                <div class="four-col">
+                    <h4>Timeline</h5>
+                    <p>6 months from concepting to MVP customer launch</p>
+                    <p>1 year total client engagement (including marketing/branding work)</p>
+                </div>
+                
+                <div class="two-col">
+                    <h4>Launched</h5>
+                    <p>November 2022</p>
+                    <p>A/B Testing and analyzing Heap dashboards</p>
+                </div>
+               
+                
+            </div>
+
+
+            </section>
 
 
 
+            <section class="fade">
+                <h2 class="small-caps">Context</h2>    
+                <h3>SBI offers revenue consulting services, and SBI Pro is digital platform for their clients</h3>
 
+                <p>Prior to starting this platform, I led the redesign of SBI's marketing website for a 4-month project, including web content and branding work. After that, we continued to partner with the client to build SBI Pro, their data and content based platform to add value to their consulting services. This case study focuses on SBI Pro, which after launch <b>empowered clients to visualize their business performance, benchmark KPIs against industry standards, and track their progress towards revenue goals, and allowed SBI to expand their business with this platform as a subscription service</b>.</p>
+            </section>
+        
+
+            <!-- <section class="fade">
+                <h2 class="small-caps">Constraints</h2>    
+                <h3>A unique design process: I couldn't interact with CEO users and there was no established brand</h3>
+                <p>Because SBI's clients are C-level execs, access to actual users or even those of a similar demographic for research was a challenge. I worked closely with the client CTO and the sales team, to provide mockups to show to clients and provided guidance on presenting designs for feedback in a non-leading way. </p>
+                <p>There was no visual design guidance for SBI, so while we'd done some branding work in our 4-month engagement, the brand continued to evolve as we built the product to grow as SBI was. Practically speaking, this meant I worked with color and typography a lot more than usual as a product designer, which was really fun! </p>
+
+                <img src="">
+            </section> -->
+
+
+           <section class="fade">
+                <h2 class="small-caps">MVP Key Features</h2>    
+                <h3>Our initial release features focused on content, organizing consulting documents, and the maturity assessment</h3>
+                <p>We needed to design and develop fast, so the MVP work was honestly rapid collaboration and UI production. After that we were able to deep dive. But it's worth starting at the bigger picture of what this platform entailed.</p>
 
                
-
                 
+            </section>
+            <section class="grid grid-w-cols fade full-width sbi">
+                     <img src="i/MVP01.jpg" class="two-col">
+                     <img src="i/MVP02.jpg" class="two-col">
+                     <img src="i/MVP03.jpg" class="two-col">
+                     <img src="i/MVP04.jpg" class="two-col">
+                     <img src="i/MVP05.jpg" class="two-col">
+                     <img src="i/MVP06.jpg" class="two-col">
+                </section>
+
+          
 
 
 
+            <!-- <section class="fade">
+                <div class="">
+                <div class="project-content  fade">
+                     <h2 class="small-caps">Collaboration</h2>    
+                    <h3>Bridging the Gap Between Consulting Insights and Data Visualization</h3>
+
+                    <p>As the sole product designer on the project, I collaborated closely with the CTO, lead engineer, project manager, and front-end developers to translate SBI's consulting expertise into an intuitive and impactful digital experience. 
+
+
+                    The key design challenging was on transforming unique, complex data into meaningful visualizations that empower clients to understand their performance and make data-driven decisions. </p><br>
+                </div>
+            
+            </div>
+      
+            </section> -->
+
+
+
+
+            <section class="">
+                <h2 class="small-caps two-col">💌 from collaborators</h3>
+                    <p> I had an amazing team working on this project and mutual appreciation was a great and wonderful part of the team culture, both within the agency team and with the clients.</p>
+                <div class="quotebox fade">
+                    Steph has been instrumental in shaping SBI Pro. 
+                    <br> <i>– Client Exec</i>
+                </div> <br>
+                <div class="quotebox fade">
+                    In addition to your beautiful designs, I am so grateful for your collaboration and feedback -- it is helping so much to push this project forward. I also LOVE how organized you are and the tags you added in Figma to indicate design/content statuses are fantastic 
+
+                    <br> <i>– Project Manager on the project</i>
+                </div> <br>
+                <div class="quotebox fade">
+                    Your continual guidance through the project defended the devs, wrangled 1000 competing priorities, and so many other things that I am just floored by. Your emphasis on dev/design alignment ensured that we have a polished and high-quality project. 
+
+                    <br> <i>– Front-end dev on the project</i>
+                </div>
             </section>
             <section class="video" id="video">
                 <video Autoplay=autoplay muted controls>
@@ -168,7 +263,7 @@
             </div>
 
             <footer>
-                I'd love to hear from you – contact me via <a href="http://www.linkedin.com/in/spicer">LinkedIn</a> or <a href="mailto:stephaniehspicer@gmail.com">send me an email</a>
+                Made with 🖤 and plain old html/css/js. Want to talk about working together? <a href="http://www.linkedin.com/in/spicer">Find me on LinkedIn</a> or <a href="mailto:stephaniehspicer@gmail.com">send me an email</a>
             </footer>
         </div>
 
