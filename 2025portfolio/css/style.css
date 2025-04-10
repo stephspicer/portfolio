@@ -655,14 +655,14 @@ section.fade.grid.thanks {
 }
 
 [data-theme="cow"]  {
-  --bg-theme: #F7F2EC;
+  --bg-theme: #f6f6f7;
   --text-ontheme: rgba(42, 44, 60, 1);
   --logo-onhome: rgba(250, 194, 195, 1);
   --bg-simple: rgba(255, 255, 255, 1);
   --text-onsimple: rgba(42, 44, 60, 1);
   --accent-onsimple: rgba(98, 87, 77, 1);
   --accent-text-ontheme: rgba(16, 15, 23, 1);
-  --bg-insight: rgba(255, 213, 223, 1);
+  --bg-insight: #ffebf0;
   --highlight: rgba(255, 255, 197, 1);
 }
 [data-theme="crow"] {
