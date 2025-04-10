@@ -82,6 +82,12 @@ body.home {
 		}
 
 		
+		nav {
+		    font-size: 1.3rem;
+		}
+		nav a {
+		    margin-left: 2rem;
+		}
 
 
 /*layout basics*/
