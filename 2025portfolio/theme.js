@@ -71,3 +71,54 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+/*animals animate */
+
+document.addEventListener('DOMContentLoaded', () => {
+  const themeSwitcher = document.getElementById('theme-switcher');
+  if (!themeSwitcher) return;
+
+  const buttons = themeSwitcher.querySelectorAll('button');
+  const initialMargins = []; // Will store initial margin-right values
+
+  // --- Configuration ---
+  const endScroll = 400; // Scroll position (in pixels) where animation completes
+  // --- End Configuration ---
+
+  // 1. Store initial margin-right values ONCE on load
+  buttons.forEach(button => {
+    const computedStyle = window.getComputedStyle(button);
+    // *** CHANGE HERE: Get marginRight instead of marginLeft ***
+    const margin = parseInt(computedStyle.marginRight, 10) || 0;
+    initialMargins.push(margin);
+  });
+
+  // 2. Create the scroll event handler function
+  function handleScroll() {
+    const currentScroll = window.scrollY;
+    const scrollFraction = Math.max(0, Math.min(1, currentScroll / endScroll));
+
+    // 3. Update margin for each button based on scroll progress
+    buttons.forEach((button, index) => {
+      const initialMargin = initialMargins[index];
+
+      // This check might be less relevant if all buttons start with margin-right
+      // but harmless to keep.
+      if (initialMargin === 0) return;
+
+      // Calculation logic remains the same: reduce margin towards 0
+      const newMargin = initialMargin * (1 - scrollFraction);
+
+      // *** CHANGE HERE: Set marginRight instead of marginLeft ***
+      button.style.marginRight = `${newMargin}px`;
+    });
+  }
+
+  // 4. Attach the event listener
+  window.addEventListener('scroll', handleScroll, { passive: true });
+
+  // Optional: Run once on load
+  // handleScroll();
+});
+
+
+
