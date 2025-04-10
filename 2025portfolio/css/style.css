@@ -1,13 +1,6 @@
 
 /* Define default theme colors */
-	:root {
-	  --primary-color: #333; /* Dark gray */
-	  --secondary-color: #eee; /* Light gray */
-	  --accent-color: #FAC2C3; /* Blue */
-	  --text-color: #000;      /* Black */
-	  --background-color: #fff; /* White */
-	  --page-accent: #000;
-	}
+	
 
 html {
 	width: 100%;
@@ -151,7 +144,7 @@ body.home {
 		}
 
 		.five-col{
-			grid-column: span 5 / 7;
+			grid-column: span 4 / 6;
 			margin-bottom: 3rem;
 		}
 		.four-col {
@@ -180,7 +173,9 @@ body.home {
 	    margin-bottom: 1rem;
 	    display: inline-block;
 	    border-radius: 8px;
+	    transition: all .25s;
 	    background-color: var(--bg-insight);
+	    color: var(--text-insight);
 	}
 
 
@@ -240,6 +235,7 @@ body.home {
 
 		svg {
 			fill: var(--logo-onhome);
+			transition: all .5s;
 		}
 
 		p.name {
@@ -262,9 +258,9 @@ body.home {
 
 /* Theme Switcher Styles */
 
-		.project div#theme-switcher {
+		/*.project div#theme-switcher {
 		    display: none;
-		}
+		}*/
 
 
 		#theme-switcher {
@@ -309,26 +305,28 @@ body.home {
 
 		}
 
-		#theme-switcher button:nth-of-type(1) {
-		    margin-right: 32px;
+		@media (max-width: 500px){ #theme-switcher{ display: none; } }
+
+		.home #theme-switcher button:nth-of-type(1) {
+		    margin-right: 16px;
 		}
-		#theme-switcher button:nth-of-type(2) {
-		    margin-right: 79px;
+		.home #theme-switcher button:nth-of-type(2) {
+		    margin-right: 40px;
 		}
-		#theme-switcher button:nth-of-type(3) {
-		    margin-right: 113px;
+		.home #theme-switcher button:nth-of-type(3) {
+		    margin-right: 56px;
 		}
-		#theme-switcher button:nth-of-type(4) {
-		    margin-right: 73px;
+		.home #theme-switcher button:nth-of-type(4) {
+		    margin-right: 36px;
 		}
-		#theme-switcher button:nth-of-type(5) {
-		    margin-right: 65px;
+		.home #theme-switcher button:nth-of-type(5) {
+		    margin-right: 33px;
 		}
-		#theme-switcher button:nth-of-type(6) {
-		    margin-right: 123px;
+		.home #theme-switcher button:nth-of-type(6) {
+		    margin-right: 61px;
 		}
-		#theme-switcher button:nth-of-type(7) {
-		    margin-right: 169px;
+		.home #theme-switcher button:nth-of-type(7) {
+		    margin-right: 84px;
 		}
 
 
@@ -380,7 +378,7 @@ body.home {
 body.project section.full-width {
     max-width: 100vw;
     overflow: scroll;
-    margin: -16rem 0 10rem;
+    margin: -12rem 0 10rem;
 }
 
 @media (max-width: 760px) {
@@ -439,6 +437,10 @@ body.project section.full-width {
    padding: 1rem 5rem;
 }
 
+.insight.quotebox {
+	padding-left: 5rem;
+}
+
 .insight figcaption {
 	font-style: italic;
 	opacity: .8;
@@ -474,7 +476,7 @@ section img {
 }
 
 h3, p, .small-caps, .flex, figcaption, form {
-	max-width: 1000px;
+	max-width: 800px;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -510,7 +512,8 @@ figcaption {
 }*/
 
 .insight {
-    background: rgb(246 133 196 / 15%);
+    background: var(--bg-insight);
+    color: var(--text-insight);
     padding: 1rem;
     border-radius: 4px;
 }
@@ -563,10 +566,10 @@ section.home-project-feature {
 }
 
 button {
-	  padding: 16px 48px;
+	 padding: 16px 48px;
 	border-radius: 8px;
-	background: var(--text-onsimple);
-	color: var(--bg-simple);
+	background: var(--button-bg);
+	color: var(--text-onbutton);
 	font-size: 18px;
 	font-weight: 400;
 	line-height: 140%; /* 25.2px */
@@ -574,7 +577,7 @@ button {
 	border: 0;
 	margin-top: 2rem;
 	cursor: pointer;
-	transition: all .3s;
+	transition: all .5s;
 	font-family: 'Rethink Sans', Inter, sans-serif;
 }
 
@@ -606,7 +609,7 @@ footer {
 }
 
 a { color: var(--accent-onsimple); }
-button:hover { background-color: var(--accent-onsimple); cursor: point; }
+button:hover { border-radius: 100px; }
 
     svg {
         fill: var(--page-accent);
@@ -627,6 +630,13 @@ body.project section.full-width.sbi {
     text-align: center;
 }
 
+#overview h1, #overview p{
+	max-width: 1000px;
+	margin: auto;
+}
+
+div.badges { margin: 1rem auto; max-width: 1000px; }
+
 #overview img {
     width: auto;
     max-height: 500px;
@@ -637,8 +647,20 @@ section.fade.grid.thanks {
     text-align: center;
     background: var(--bg-theme);
     padding: 3rem 0;
+    transition: all .35s;
 }
 
+body.sbi svg {
+    fill: var(--sbi);
+}
+
+body.fetch svg {
+    fill: var(--fetch);
+}
+
+body.upgrade svg {
+    fill: var(--upgrade);
+}
 
 /*theme colors*/
 
@@ -675,6 +697,23 @@ section.fade.grid.thanks {
 		  --background-color: #4563CF;
 		}*/
 
+:root {
+  --bg-theme: #f6f6f7;
+  --text-ontheme: rgba(42, 44, 60, 1);
+  --logo-onhome: rgba(42, 44, 60, 1);
+  --bg-simple: rgba(255, 255, 255, 1);
+  --text-onsimple: rgba(42, 44, 60, 1);
+  --accent-onsimple: rgba(98, 87, 77, 1);
+  --accent-text-ontheme: rgba(16, 15, 23, 1);
+  --bg-insight: #ffebf0;
+  --highlight: rgba(255, 255, 197, 1);
+  --button-bg: rgba(42, 44, 60, 1);
+  --text-onbutton: rgba(255, 255, 255, 1);
+    --upgrade: #0e680e;
+  --fetch: #dd3247;
+  --sbi: #3591CF;
+}
+
 [data-theme="peacock"] {
   --bg-theme: rgba(56, 86, 195, 1);
   --text-ontheme: rgba(158, 255, 253, 1);
@@ -683,20 +722,32 @@ section.fade.grid.thanks {
   --text-onsimple: rgba(255, 255, 255, 1);
   --accent-onsimple: rgba(158, 255, 253, 1);
   --accent-text-ontheme: rgba(207, 251, 125, 1);
-  --bg-insight: rgba(11, 26, 81, 1);
+  --bg-insight: #0be6bb;
+  --text-insight: #000;12
   --highlight: rgba(0, 94, 80, 1);
+  --button-bg: rgba(42, 44, 60, 1);
+  --text-onbutton: rgba(255, 255, 255, 1);
+    --upgrade: #078c07;
+  --fetch: #9ec438;
+  --sbi: #7ac3f8;
 }
 
 [data-theme="cow"]  {
   --bg-theme: #f6f6f7;
   --text-ontheme: rgba(42, 44, 60, 1);
-  --logo-onhome: rgba(250, 194, 195, 1);
+  --logo-onhome: rgba(42, 44, 60, 1);
   --bg-simple: rgba(255, 255, 255, 1);
   --text-onsimple: rgba(42, 44, 60, 1);
   --accent-onsimple: rgba(98, 87, 77, 1);
   --accent-text-ontheme: rgba(16, 15, 23, 1);
-  --bg-insight: #ffebf0;
+  --bg-insight: #222;
+  --text-insight: rgba(255, 255, 255, 1);
   --highlight: rgba(255, 255, 197, 1);
+  --button-bg: rgba(42, 44, 60, 1);
+  --text-onbutton: rgba(255, 255, 255, 1);
+  --upgrade: #0e680e;
+  --fetch: #dd3247;
+  --sbi: #3591CF;
 }
 [data-theme="crow"] {
   --bg-theme: rgba(16, 15, 23, 1);
@@ -708,6 +759,11 @@ section.fade.grid.thanks {
   --accent-text-ontheme: rgba(255, 255, 255, 1);
   --bg-insight: rgba(17, 28, 50, 1);
   --highlight: rgba(54, 18, 96, 1);
+  --button-bg: rgba(0, 168, 120, 1);m 
+  --text-onbutton: rgba(255, 255, 255, 1);
+   --upgrade: #078c07;
+  --fetch: #9ec438;
+  --sbi: #7ac3f8;
 }
 [data-theme="pig"]{
   --bg-theme: rgba(255, 235, 236, 1);
@@ -719,16 +775,62 @@ section.fade.grid.thanks {
   --accent-text-ontheme: rgba(9, 76, 211, 1);
   --bg-insight: rgba(255, 235, 236, 1);
   --highlight: rgba(255, 255, 197, 1);
+  --button-bg: rgba(42, 44, 60, 1);
+  --text-onbutton: rgba(255, 255, 255, 1);
+  --upgrade: #0e680e;
+  --fetch: #dd3247;
+  --sbi: #3591CF;
 }
 
 [data-theme="jelly"]{
  --bg-theme: #0C1D31FF;
   --text-ontheme: #A6DAFFFF;
   --logo-onhome: #00BBFFFF;
-  --bg-simple: #FFFFFFFF;
-  --text-onsimple: #0F1017FF;
+  --bg-simple: rgba(16, 15, 23, 1);
+  --text-onsimple: rgba(255, 255, 255, 1);
   --accent-onsimple: #0076EBFF;
   --accent-text-ontheme: #63EFFFFF;
-  --bg-insight: #DAE7F3FF;
-  --highlight: #B0EAFFFF;
+  --bg-insight: #0C1D31FF;
+  --text-insight: #A6DAFFFF;
+  --highlight: #002060;
+  --button-bg: #0076EBFF;
+  --text-onbutton: rgba(255, 255, 255, 1);
+   --upgrade: #078c07;
+  --fetch: #9ec438;
+  --sbi: #7ac3f8;
+}
+
+[data-theme="fish"]{
+  --bg-theme: #fff759;
+  --text-ontheme: rgba(9, 76, 211, 1);
+  --logo-onhome: #00beda;
+  --bg-simple: rgba(255, 255, 255, 1);
+  --text-onsimple: rgba(42, 44, 60, 1);
+  --accent-onsimple: rgba(9, 76, 211, 1);
+  --accent-text-ontheme: #114d62;
+  --bg-insight: rgb(231 242 163);
+  --highlight: rgba(255, 255, 197, 1);
+  --button-bg: #114d62;
+  --text-onbutton: rgba(255, 255, 255, 1);
+  --upgrade: #0e680e;
+  --fetch: #dd3247;
+  --sbi: #3591CF;
+}
+
+
+[data-theme="flamingo"]{
+  --bg-theme: #FB70C5;
+  --text-ontheme: rgba(9, 76, 211, 1);
+  --logo-onhome: #E8F4C5;
+  --bg-simple: rgba(255, 255, 255, 1);
+  --text-onsimple: rgba(42, 44, 60, 1);
+  --accent-onsimple: rgba(9, 76, 211, 1);
+  --accent-text-ontheme: #302D3B;
+  --bg-insight: rgb(255 224 243);
+  --highlight: rgba(255, 255, 197, 1);
+  --button-bg: #720C41;
+  --text-onbutton: rgba(255, 255, 255, 1);
+  --upgrade: #0e680e;
+  --fetch: #dd3247;
+  --sbi: #3591CF;
 }
