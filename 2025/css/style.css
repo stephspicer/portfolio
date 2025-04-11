@@ -80,6 +80,7 @@ body.home {
 		
 		nav {
 		    font-size: 1.3rem;
+		    letter-spacing: -0.5px;
 		}
 		nav a {
 		    margin-left: 2rem;
@@ -90,12 +91,10 @@ body.home {
 	
 
 		section{
-			padding: 0 6rem;
+			padding: 6rem 6rem;
 			max-width: 1440px;
 			margin-left: auto;
 			margin-right: auto;
-
-
 		}
 
 		.grid{
@@ -133,6 +132,8 @@ body.home {
 		    background-color: var(--bg-theme);
 		    transition: background 250ms;
 		    max-width: unset;
+		        padding-top: 0;
+
 		}
 		body.home header {
 			background-color: var(--bg-theme);
@@ -339,7 +340,8 @@ h4.value {
 			    scale: 0.6;
 			}
 			header {padding: 0;}
-
+			.fade.quotebox{ padding: 0; }
+			header { padding-right: 2rem; }
 
 
 		}
@@ -442,6 +444,12 @@ body.project section.full-width {
     }
 
     .home h1 {font-size: 1.9rem;}
+    .home h2 {
+    	font-size: 25px;
+    }
+    .grid.values {
+    	display: block;
+    }
 }
 
 
@@ -662,9 +670,9 @@ footer {
 a { color: var(--accent-onsimple); }
 button:hover { border-radius: 100px; }
 
-    svg {
+    /*svg {
         fill: var(--page-accent);
-    }
+    }*/
    body.home .experience svg {
 	    fill: var(--text-onsimple);
 	    height: 19px;
@@ -675,7 +683,7 @@ p a{
 	text-decoration: underline;
 }
 
-section.closing {
+section.closing, .thanks {
 	margin-bottom: 10rem;
 }
 
@@ -683,7 +691,6 @@ section.closing {
 
 body.project section.full-width.sbi {
     background-color: #133044;
-    margin-top: -10rem;
     padding: 2rem;
 }
 .hero-img {
