@@ -339,10 +339,8 @@ h4.value {
 			.logo {
 			    scale: 0.6;
 			}
-			header {padding: 0;}
+			header {padding: 0 2rem 0 0;}
 			.fade.quotebox{ padding: 0; }
-			header { padding-right: 2rem; }
-
 
 		}
 
