@@ -714,7 +714,7 @@ section.fade.grid.thanks {
     text-align: center;
     background: var(--bg-theme);
     padding: 3rem 0;
-    margin: 7rem 2rem;
+    margin: 7rem auto;
     transition: all .35s;
 }
 
