@@ -1,0 +1,9 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  background-color: #efefef; /* Dark background so the colors pop */
+}
+
+canvas {
+  display: block;
+}
