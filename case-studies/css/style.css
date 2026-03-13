@@ -28,11 +28,11 @@ body.home {
 	max-width: unset;
 }
 
-.logo svg{
-		    scale: 0.5;
-	}
 
 
+.logo svg {
+    scale: 0.5;
+}
 
 /*typography */
 		h1{ 
