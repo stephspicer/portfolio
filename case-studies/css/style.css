@@ -30,7 +30,7 @@ body.home {
 
 
 
-.logo svg {
+.logo svg{
     scale: 0.5;
 }
 
@@ -198,6 +198,12 @@ justify-items: center;
 	color: var(--accent-onsimple);
 	margin: 0;
 }
+
+.home .hero h4 {
+	color: var(--accent-color);
+}
+
+
 
 .value:nth-of-type(1) { grid-area: 1 / 1 / 2 / 2; }
 .value:nth-of-type(2) { grid-area: 1 / 2 / 2 / 3; }
@@ -813,6 +819,7 @@ span.xpdetails {
   --logo-onhome: rgba(42, 44, 60, 1);
   --bg-simple: rgba(255, 255, 255, 1);
   --text-onsimple: rgba(42, 44, 60, 1);
+  --accent-color: rgba(98, 87, 77, 1);
   --accent-onsimple: rgba(98, 87, 77, 1);
   --accent-text-ontheme: rgba(16, 15, 23, 1);
   --bg-insight: #ffebf0;
@@ -830,6 +837,7 @@ span.xpdetails {
   --logo-onhome: rgba(145, 232, 15, 1);
   --bg-simple: rgba(15, 16, 23, 1);
   --text-onsimple: rgba(255, 255, 255, 1);
+   --accent-color: rgba(158, 255, 253, 1);
   --accent-onsimple: rgba(158, 255, 253, 1);
   --accent-text-ontheme: rgba(207, 251, 125, 1);
   --bg-insight: #0be6bb;
@@ -848,6 +856,7 @@ span.xpdetails {
   --logo-onhome: rgba(42, 44, 60, 1);
   --bg-simple: rgba(255, 255, 255, 1);
   --text-onsimple: rgba(42, 44, 60, 1);
+  --accent-color: rgba(98, 87, 77, 1);
   --accent-onsimple: rgba(98, 87, 77, 1);
   --accent-text-ontheme: rgba(16, 15, 23, 1);
   --bg-insight: #222;
@@ -865,6 +874,7 @@ span.xpdetails {
   --logo-onhome: rgba(0, 168, 120, 1);
   --bg-simple: rgba(16, 15, 23, 1);
   --text-onsimple: rgba(255, 255, 255, 1);
+  --accent-color: rgba(255, 255, 255, 0.6);
   --accent-onsimple: rgba(255, 255, 255, 1);
   --accent-text-ontheme: rgba(255, 255, 255, 1);
   --bg-insight: rgba(17, 28, 50, 1);
@@ -881,6 +891,7 @@ span.xpdetails {
   --logo-onhome: rgba(185, 98, 120, 1);
   --bg-simple: rgba(255, 255, 255, 1);
   --text-onsimple: rgba(42, 44, 60, 1);
+  --accent-color: rgba(9, 76, 211, 1);
   --accent-onsimple: rgba(9, 76, 211, 1);
   --accent-text-ontheme: rgba(9, 76, 211, 1);
   --bg-insight: rgba(255, 235, 236, 1);
@@ -898,6 +909,7 @@ span.xpdetails {
   --logo-onhome: #00BBFFFF;
   --bg-simple: rgba(16, 15, 23, 1);
   --text-onsimple: rgba(255, 255, 255, 1);
+  --accent-color: #0076EBFF;
   --accent-onsimple: #0076EBFF;
   --accent-text-ontheme: #63EFFFFF;
   --bg-insight: #0C1D31FF;
@@ -916,6 +928,7 @@ span.xpdetails {
   --logo-onhome: #00beda;
   --bg-simple: rgba(255, 255, 255, 1);
   --text-onsimple: rgba(42, 44, 60, 1);
+  --accent-color: #1c646e;
   --accent-onsimple: #1c646e;
   --accent-text-ontheme: #114d62;
   --bg-insight: rgb(231 242 163);
@@ -934,6 +947,7 @@ span.xpdetails {
   --logo-onhome: #720C41;
   --bg-simple: rgba(255, 255, 255, 1);
   --text-onsimple: rgba(42, 44, 60, 1);
+  --accent-color: #720C41;
   --accent-onsimple: rgba(9, 76, 211, 1);
   --accent-text-ontheme: #302D3B;
   --bg-insight: rgb(255 224 243);
