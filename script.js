@@ -1,5 +1,4 @@
 const canvas = document.getElementById('heatmapCanvas');
-const ctx = canvas.getContext('2d');
 
 // --- Configuration ---
 const resolution = 2;        // Try 2 or 4. (4 is highly recommended for performance)
