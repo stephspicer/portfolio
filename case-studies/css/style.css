@@ -366,7 +366,7 @@ justify-items: center;
 		}
 
 		@media (max-width: 800px){
-			#theme-switcher { bottom: 1vh; }
+			#theme-switcher { display: none; }
 			#theme-switcher button { padding: 10px 13px 8px 0px; margin: .5rem -1px;}
 			.logo {
 			    scale: 0.6;
