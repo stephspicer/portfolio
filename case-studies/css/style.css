@@ -28,6 +28,9 @@ body.home {
 	max-width: unset;
 }
 
+.logo svg{
+		    scale: 0.5;
+	}
 
 
 
