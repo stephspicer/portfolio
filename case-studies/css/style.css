@@ -12,7 +12,7 @@ body {
   color: var(--text-onsimple);
   margin: 0 auto; /* Reset default margin */
   /*max-width: 1440px;*/
-  transition: background 250ms;
+  transition: all 250ms;
   line-height: 1.5;
   font-weight: 300;
   letter-spacing: 1%;
@@ -42,6 +42,9 @@ body.home {
 		body.home h1{
 			color: var(--accent-text-ontheme);
 			margin-top: 0;
+			font-size: 2rem;
+			line-height: 1.5;
+			margin-bottom: 0.8rem;
 		}
 
 
@@ -69,6 +72,10 @@ body.home {
 		h4 {
 		    font-weight: 600;
 		}
+		.home h4.hero{
+			font-size: 1.7rem;
+		}
+
 		p { font-family: 'Newsreader', serif; font-weight: 300; font-size: 1.125rem;}
 
 
@@ -125,19 +132,23 @@ body.home {
 		}
 
 		body.home .grid.hero{
-		    min-height: calc(100vh - 140px);
+		    /*min-height: calc(100vh - 140px);*/
 		    align-items: center;
 		    align-content: center;
-		    padding-bottom: 5rem;
 		    background-color: var(--bg-theme);
-		    transition: background 250ms;
+		    transition: all 250ms;
 		    max-width: unset;
-		        padding-top: 0;
+	        padding: 5rem;
+	        position: relative;
+	        z-index: 4;
+            box-shadow: 0 0 122px 132px var(--bg-theme);
 
 		}
 		body.home header {
 			background-color: var(--bg-theme);
 			transition: background 250ms;
+			position: relative;
+			z-index: 10;
 		}
 
 		@media (max-width: 1000px) {
@@ -176,7 +187,7 @@ justify-items: center;
     padding: 3rem 0;
 }
 
-h4.value {
+.home h4 {
 	font-size: 2.5rem;
 	font-family: 'Newsreader', serif;
 	font-style: italic;
@@ -303,18 +314,21 @@ h4.value {
 
 		#theme-switcher {
 		    position: fixed;
-		    bottom: 2rem;
+		    bottom: 30%;
 		    right: 0;
 		    z-index: 100;
 		    display: flex;
 		    flex-direction: column;
 		    margin-right: 1rem;
-		    align-items: flex-end;
+		    align-items: center;
+		    gap: 0.5rem;
 		}
 
 		#theme-switcher button {
-		  padding: 8px;
-		  margin: 4px 0;
+		  width: 16px;
+		  height: 16px;
+		  margin: 8px;
+		  padding: 0;
 		  margin-right: 16px;
     	  font-size: 1.25rem;
 		  border: none;
@@ -323,14 +337,23 @@ h4.value {
 		  border-radius: 4px;
 		  background: none;
 		  transition: all 250ms;
-		  
+		  background: var(--bg-theme);
 		  border-radius: 10px;
-		  width: fit-content;
+		  /*outline: 4px solid var(--bg-theme);*/
+		  transition: 100ms linear all;
 
 		}
 
 		#theme-switcher button.active {
-			font-size: 2rem;
+			border: 0px solid var(--bg-theme);
+			outline: 2px solid var(--bg-theme);
+			box-shadow: 0 0 0px 6px var(--bg-theme) inset, 0 0 0px 3px var(--logo-onhome);
+		}
+
+		#theme-switcher button:hover{
+			border: 0px solid var(--bg-theme);
+			outline: 2px solid var(--bg-theme);
+			box-shadow: 0 0 0px 6px var(--bg-theme) inset, 0 0 0px 3px var(--logo-onhome);
 		}
 
 		@media (max-width: 800px){
@@ -344,7 +367,7 @@ h4.value {
 
 		}
 
-		@media (max-width: 500px){ 
+		/*@media (max-width: 500px){ 
 			#theme-switcher{ display: none; } }
 
 		.home #theme-switcher button:nth-of-type(1) {
@@ -368,7 +391,7 @@ h4.value {
 		.home #theme-switcher button:nth-of-type(7) {
 		    margin-right: 84px;
 		}
-
+*/
 	}
 
 
@@ -402,7 +425,7 @@ h4.value {
 			}
 		}
 		body.project h1{
-			font-size: 3rem;
+			font-size: 2.2rem;
 			margin: 1rem 0;
 		}
 		body.project h2{
@@ -699,7 +722,7 @@ body.project section.full-width.sbi {
 
 #overview h1, #overview p{
 	max-width: 1000px;
-	margin: auto;
+	margin: 0 auto 1rem;
 }
 
 div.badges { margin: 1rem auto; max-width: 1000px; }
