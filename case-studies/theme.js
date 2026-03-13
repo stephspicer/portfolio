@@ -122,3 +122,67 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+
+// Map your data-theme names to the specific emojis
+const emojiMap = {
+    'cow': '🐄',
+    'crow': '🐦‍⬛', 
+    'pig': '🐷',
+    'fish': '🐠',
+    'flamingo': '🦩',
+    'peacock': '🦚',
+    'jelly': '🪼'
+};
+
+
+const themeButtons = document.querySelectorAll('#theme-switcher button');
+
+themeButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const theme = button.getAttribute('data-theme');
+        const emojiChar = emojiMap[theme] || '✨'; 
+
+        const emoji = document.createElement('div');
+        emoji.classList.add('floating-emoji');
+        emoji.textContent = emojiChar;
+
+        const rect = button.getBoundingClientRect();
+        const startX = rect.left; 
+        const startY = rect.top + (rect.height / 2) - 12; 
+
+        emoji.style.left = `${startX}px`;
+        emoji.style.top = `${startY}px`;
+
+        // --- NEW: Randomization Logic ---
+        
+        // 1. Random Rotation (-45deg to 45deg)
+        const randomDeg = Math.floor(Math.random() * 90) - 45; 
+        
+        // 2. Random End Position (Left and Down)
+        // Moves left between 40px and 90px
+        const endX = -(Math.random() * 50 + 40); 
+        // Moves down between 40px and 90px
+        const endY = Math.random() * 50 + 40;  
+
+        // 3. Random Mid Position (The Peak of the Arc)
+        // Travels about halfway horizontally at the peak
+        const midX = endX / 2; 
+        // Moves UP between 30px and 70px (negative Y is up)
+        const midY = -(Math.random() * 20 + 10); 
+
+        // Apply all variables to the element
+        emoji.style.setProperty('--rotation', `${randomDeg}deg`);
+        emoji.style.setProperty('--end-x', `${endX}px`);
+        emoji.style.setProperty('--end-y', `${endY}px`);
+        emoji.style.setProperty('--mid-x', `${midX}px`);
+        emoji.style.setProperty('--mid-y', `${midY}px`);
+        
+        // --------------------------------
+
+        document.body.appendChild(emoji);
+
+        emoji.addEventListener('animationend', () => {
+            emoji.remove();
+        });
+    });
+});

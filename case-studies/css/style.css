@@ -376,6 +376,35 @@ justify-items: center;
 
 		}
 
+		.floating-emoji {
+		    position: fixed; 
+		    pointer-events: none;
+		    font-size: 32px;
+		    z-index: 1000;
+		    animation: float-away 1s ease-in-out forwards; 
+		}
+
+
+		@keyframes float-away {
+		    0% {
+		        opacity: 0.6;
+		        scale: 0.7;
+		        transform: translate(10px, 10px) scale(0.5) rotate(0deg);
+		    }
+		    50% {
+		        scale: 1;
+		        opacity: 0.8; /* Keep it fully visible at the peak */
+		        /* Uses the mid-x and mid-y variables for the upward arc */
+		        transform: translate(var(--mid-x), var(--mid-y)) scale(1) rotate(calc(var(--rotation) / 2));
+		    }
+		    100% {
+		        opacity: 0;
+		        scale: 0.6;
+		        /* Falls down to the end-x and end-y variables */
+		        transform: translate(var(--end-x), var(--end-y)) scale(1.5) rotate(var(--rotation)); 
+		    }
+		}
+
 		/*@media (max-width: 500px){ 
 			#theme-switcher{ display: none; } }
 
