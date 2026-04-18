@@ -7,7 +7,7 @@ html {
 }
 
 body {
-  font-family: Rethink Sans, Inter, sans-serif;
+  font-family: Funnel Sans, Inter, sans-serif;
   background-color: var(--bg-simple);
   color: var(--text-onsimple);
   margin: 0 auto; /* Reset default margin */
@@ -69,7 +69,7 @@ body.home {
 		h4 {
 		    font-weight: 600;
 		}
-		p { font-family: 'Newsreader', serif; font-weight: 300; font-size: 1.125rem;}
+		p { font-family: 'Funnel Sans', serif; font-weight: 300; font-size: 1.125rem;}
 
 
 		.hero p {
